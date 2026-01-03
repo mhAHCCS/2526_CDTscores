@@ -1,0 +1,112 @@
+table MathRangeScores
+	lineageTag: e61cd7ac-98ba-46ee-9d8f-1b90440521f8
+
+	column Subject
+		dataType: string
+		lineageTag: 04fa26c9-190a-4a48-97e5-3390f94249e6
+		summarizeBy: none
+		sourceColumn: Subject
+
+		annotation SummarizationSetBy = Automatic
+
+	column Course
+		dataType: string
+		lineageTag: 1917ef90-5297-45dc-883e-295ea98e20bc
+		summarizeBy: none
+		sourceColumn: Course
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Grade Level'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e61616e-203e-48da-bdc1-d1ec71cf0d84
+		summarizeBy: none
+		sourceColumn: Grade Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Red Low'
+		dataType: int64
+		formatString: 0
+		lineageTag: a81a56da-d7f3-4a65-81aa-0537780795aa
+		summarizeBy: none
+		sourceColumn: Red Low
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Red High'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d26e139-ad76-49c5-beaa-11dc68ff8a2a
+		summarizeBy: none
+		sourceColumn: Red High
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Green Low'
+		dataType: int64
+		formatString: 0
+		lineageTag: ac36f969-f4e4-4b15-a7b4-a11df8d750f9
+		summarizeBy: none
+		sourceColumn: Green Low
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Green High'
+		dataType: int64
+		formatString: 0
+		lineageTag: 84ff0516-480f-4469-811c-3cfe558aa656
+		summarizeBy: none
+		sourceColumn: Green High
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Blue Low'
+		dataType: int64
+		formatString: 0
+		lineageTag: b040cf1b-2b07-43da-8414-57ce85467651
+		summarizeBy: none
+		sourceColumn: Blue Low
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Blue High'
+		dataType: int64
+		formatString: 0
+		lineageTag: 98be0f54-d475-47e9-8df8-e1f01fca37e5
+		summarizeBy: none
+		sourceColumn: Blue High
+
+		annotation SummarizationSetBy = Automatic
+
+	column ImpliedColor
+		dataType: string
+		lineageTag: 85926509-bbcd-491b-936a-123aa46e5e9b
+		summarizeBy: none
+		sourceColumn: ImpliedColor
+
+		annotation SummarizationSetBy = Automatic
+
+	column CKmathTestGrade
+		dataType: string
+		lineageTag: bf3a686e-bda1-42b5-9f9c-2422c02b441f
+		summarizeBy: none
+		sourceColumn: CKmathTestGrade
+
+		annotation SummarizationSetBy = Automatic
+
+	partition MathRangeScores = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("rdOxDoIwEAbgVyHMmvSulZbRiTjobggDxkYHjQmy+PZCjyiSFG29Af6EtF/S/2hZptu6PacLF0nR1Ed7T7Kl6b7o7kEhujcIAxTYBypFsaIV/ZJdWi1mLPO2AIdwJBpJoX628hBrP2+B4MSAE8NobH052UNTJ5uhLDUoUlLQ9PKMQnuKHyuuJgYGeBhkYXSI4i3YRCuFvV1t2zwmU8oURX+5QKKmMJ4DjZCPIcUrwKIgh6JDEF+3Jhp5jXlykZA2otsIMhcU8O2fm96kvxxgcpDH0SGMv2UTyFRP", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Subject = _t, Course = _t, #"Grade Level" = _t, #"Red Low" = _t, #"Red High" = _t, #"Green Low" = _t, #"Green High" = _t, #"Blue Low" = _t, #"Blue High" = _t, ImpliedColor = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Grade Level", Int64.Type}, {"Red Low", Int64.Type}, {"Red High", Int64.Type}, {"Green Low", Int64.Type}, {"Green High", Int64.Type}, {"Blue Low", Int64.Type}, {"Blue High", Int64.Type}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "CKmathTestGrade", each [Course] & Text.From([Grade Level]))
+				in
+				    #"Added Custom"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

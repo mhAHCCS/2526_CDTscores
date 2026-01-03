@@ -1,0 +1,66 @@
+relationship 4eba4f8f-d17b-489d-9b14-05bd0caeb007
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BatchDownload.'Starting Tested Date'
+	toColumn: LocalDateTable_c798956a-64f0-4347-9866-3a9f7332dd9b.Date
+
+relationship 1bf52c7f-8b7d-474f-bdd4-9f75dba22968
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BatchDownload.'Ending Tested Date'
+	toColumn: LocalDateTable_8e2c84ec-027b-430b-afac-17a85a054655.Date
+
+relationship 64f320ce-c8cb-06c2-2284-f8bde7670304
+	fromColumn: BatchDownload.CKBatchAssmtnameGrade
+	toColumn: MathRangeScores.CKmathTestGrade
+
+relationship 5c72baa3-39e5-90d1-e616-0fdc99b93f72
+	fromColumn: BatchDownload.CKBatchAssmtnameGrade
+	toColumn: ELARangeScores.CKELACourseGrade
+
+relationship f251625d-14b1-99d3-190a-331545b93b4c
+	fromColumn: BatchDownload.CKBatchAssmtnameGrade
+	toColumn: ScienceRangeScores.CKScienceCourseGrade
+
+relationship 2e191c17-a2c5-43b4-af23-494c9be02894
+	joinOnDateBehavior: datePartOnly
+	fromColumn: StudentInfo.'STUDENTS.DOB'
+	toColumn: LocalDateTable_4a4b5118-a8a8-41c6-9a4e-295b3cf05c2f.Date
+
+relationship dd8c34b9-1c39-4d5a-b6df-a65106c2194a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: StudentInfo.'STUDENTS.ExitDate'
+	toColumn: LocalDateTable_06331206-b5dd-411c-b5ec-c74a78ffa71d.Date
+
+relationship AutoDetected_5ce1b335-93f5-4f90-9a7c-742a465f4dd4
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: MentorsCMs.'STUDENTS.State_StudentNumber'
+	toColumn: StudentInfo.'STUDENTS.State_StudentNumber'
+
+relationship AutoDetected_e9e5da3e-dae7-4b89-a7f8-357ebe549ecd
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Counselors.'STUDENTS.State_StudentNumber'
+	toColumn: StudentInfo.'STUDENTS.State_StudentNumber'
+
+relationship AutoDetected_806f45bb-e77b-4a3b-94cf-570210e7cdcd
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: MentorsCMs.'STUDENTS.Student_Number'
+	toColumn: Counselors.'STUDENTS.Student_Number'
+
+relationship f88d1a2e-add9-2970-32ba-fe12e9198a6b
+	crossFilteringBehavior: bothDirections
+	fromColumn: BatchDownload.PAsecureID
+	toColumn: StudentInfo.'STUDENTS.State_StudentNumber'
+
+relationship 6b3d6700-5268-4c6f-a6d9-53a7ae5195e7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BatchDownload.EndDateTime
+	toColumn: LocalDateTable_1b9d6f46-057a-45de-a831-934914ebfab1.Date
+
+relationship AutoDetected_46ab37c0-9d41-4488-a2f9-bd58b88bbaa5
+	crossFilteringBehavior: bothDirections
+	fromColumn: Courses.'STUDENTS.STATE_STUDENTNUMBER'
+	toColumn: StudentInfo.'STUDENTS.State_StudentNumber'
+

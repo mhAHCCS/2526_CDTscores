@@ -1,0 +1,1242 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "GiftedTopNdefault",
+  "name": "6fdb65d54cdf73ddb528",
+  "options": {
+    "targetVisualNames": []
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ac82c4455f0f50187042",
+    "filters": {
+      "byExpr": [
+        {
+          "name": "61c291ff699d48504d6c",
+          "type": "Advanced",
+          "filter": {
+            "Version": 2,
+            "From": [
+              {
+                "Name": "s",
+                "Entity": "StudentInfo",
+                "Type": 0
+              }
+            ],
+            "Where": [
+              {
+                "Condition": {
+                  "Not": {
+                    "Expression": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "s"
+                              }
+                            },
+                            "Property": "STUDENTS.LastFirst"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "null"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "StudentInfo"
+                }
+              },
+              "Property": "STUDENTS.LastFirst"
+            }
+          },
+          "howCreated": 1
+        }
+      ]
+    },
+    "sections": {
+      "ac82c4455f0f50187042": {
+        "visualContainers": {
+          "1550b2e7b78ba325dfe2": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "be493b71b89f97310fbd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.Grade_Level"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.Grade_Level"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "1e1ad7277108af79a625": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e5d6b6eda1ed7e3adda8",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "MeasureTable",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "m"
+                                  }
+                                },
+                                "Property": "NameHasData"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "1L"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "NameHasData"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "bb4fe01a8d208d5c8a73",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.LastFirst"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.LastFirst"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "335abb44aa3411744572": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "41f457e892e948096157": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "440bd1d6416af3104c49": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "03b87defd0021c9b0b2a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Content Area"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Content Area"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "4644e6727b33392a7d11": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7146180f7b75d8331fce",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "ELLcode"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "4b3e6cc0ef55c0953f66": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "52f50b36ba1b8b1e5b87": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "45b6c7e79f5cd24bfcbc",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "IEP"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "66dbf0efc99b7d5e8afe": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ff9f5cd0faccbb4848bc",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "Has504"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "72e8c9e99b3c2dfffb81": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "b84a187cb3f36cab1afd",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TotalScaleScoreColor"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f15361b6253ee117cf49",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "TopX_Color_Count"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "columnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TotalScaleScoreColor"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TotalScaleScoreColor"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "832a959c00b37fb8a4a4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9fa229f576a2808d7433",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Teacher"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Teacher"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "854f78826be9d4b2aed4": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "9e897535cd02165dbc7d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a45fd2d8c9d0b5f96504",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.Ethnicity"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.Ethnicity"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "a4c90bad20fe6ae565bc": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "55f60fa081b748dd2d02",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Top Percentage Filter"
+                        }
+                      },
+                      "Property": "Top Percentage Filter"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "t",
+                                "Entity": "Top Percentage Filter",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "t"
+                                            }
+                                          },
+                                          "Property": "Top Percentage Filter"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "20L"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Top Percentage Filter"
+                        }
+                      },
+                      "Property": "Top Percentage Filter"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "b39b5b1b40abd143c0a6": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e7f6cdb568e4a72e8cfd",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Assessment Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cfa7348bc8486068e92c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Content Area"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "de8c54d976308d8b5d3c",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "MeasureTable",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "m"
+                                  }
+                                },
+                                "Property": "Top_Percent_Filtered_Overall"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "1L"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "Top_Percent_Filtered_Overall"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "024db6b9265efa746809",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Scale Score for DC 1"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fb2bcacc37463516baf4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Scale Score for DC 2"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dd48aa346b95d1e78666",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Scale Score for DC 3"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "416c3c3933d855cd5f37",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Scale Score for DC 4"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "483f475e7d6229c16069",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Scale Score for DC 5"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "93006f741963a004b93c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "EconomicallyDisadvantaged"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "25de944b008978dce4f5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "ELLcode"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d1ec41421d485ec51c5d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "FinishedSameDay"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "583d9924c37b6987f65d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.Grade_Level"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dd860063a53195264195",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "IEP"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e260d18afefe213b883e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TestDurationMinutes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1d498d111e9b3d419d6d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.State_StudentNumber"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9bdbbbfb11f2c2526bca",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.LastFirst"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a50974ab7f60590c4b01",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.Student_Number"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "853767c9ad3427d24ef0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Teacher"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5e67fa0e207fe4527247",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Total Scale Score for Test"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Total Scale Score for Test"
+                    }
+                  }
+                },
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.LastFirst"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "b77315d77ae0a2256c85": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "c48053c950010fce087b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "EconomicallyDisadvantaged"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "EconomicallyDisadvantaged"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "c5890ad16eb3e0922aa8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e794539faf839b687aff",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "TopX_Student_Count"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a832d1290d82e9a620d0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "TopX_Test_Count"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2aa210cb7bb8f75cdb2f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "TopX_Avg_Overall"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "TopX_Student_Count"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "def6b1a4bf769d78035c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "db1bf36fa840351dce91",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Assessment Name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Assessment Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "fe90e3be7f2c65b20018": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

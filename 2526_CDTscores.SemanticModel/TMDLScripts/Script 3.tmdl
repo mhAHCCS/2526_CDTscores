@@ -1,0 +1,28 @@
+createOrReplace
+
+	table 'Top Percentage Filter'
+		lineageTag: 41c3e45f-06d5-46b2-9bbb-48b43387ac53
+
+		measure 'Top Percentage Filter Value' = SELECTEDVALUE('Top Percentage Filter'[Top Percentage Filter], 100)
+			formatString: 0
+			lineageTag: 1289f742-65e8-4d06-91b1-8e96aeae2142
+
+		column 'Top Percentage Filter'
+			formatString: 0
+			lineageTag: 39c207e7-1082-49ba-8571-124fabdfc36a
+			summarizeBy: none
+			sourceColumn: [Value]
+
+			extendedProperty ParameterMetadata =
+					{
+					  "version": 0
+					}
+
+			annotation SummarizationSetBy = User
+
+		partition 'Top Percentage Filter' = calculated
+			mode: import
+			source = GENERATESERIES(1, 100, 1)
+
+		annotation PBI_Id = 8b0409fdf44c455494be7d623fd00a43
+

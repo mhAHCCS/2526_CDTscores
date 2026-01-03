@@ -1,0 +1,128 @@
+createOrReplace
+
+	table CombinedRangeScores
+		lineageTag: a85b13d8-1a8c-4f67-8e33-34a71c4eb41c
+
+		column Subject
+			dataType: string
+			lineageTag: 37f85870-ec89-47de-9cb1-6bf99607012d
+			summarizeBy: none
+			sourceColumn: Subject
+
+			annotation SummarizationSetBy = Automatic
+
+		column Course
+			dataType: string
+			lineageTag: 143d861c-c2cc-423c-94e9-f952e911d063
+			summarizeBy: none
+			sourceColumn: Course
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Grade Level'
+			dataType: int64
+			formatString: 0
+			lineageTag: e62ab23f-a985-4e9b-8a11-8fb78c6672f1
+			summarizeBy: sum
+			sourceColumn: Grade Level
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Red Low'
+			dataType: int64
+			formatString: 0
+			lineageTag: 6e7ff9ea-d70d-4e35-9002-47d710fd3f54
+			summarizeBy: sum
+			sourceColumn: Red Low
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Red High'
+			dataType: int64
+			formatString: 0
+			lineageTag: 0dbde928-b163-419e-9310-e66ac515da74
+			summarizeBy: sum
+			sourceColumn: Red High
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Green Low'
+			dataType: int64
+			formatString: 0
+			lineageTag: 5f9df87a-75cf-4060-9958-fa6db096fade
+			summarizeBy: sum
+			sourceColumn: Green Low
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Green High'
+			dataType: int64
+			formatString: 0
+			lineageTag: b4750864-f0a7-4663-89be-d1fded382ffd
+			summarizeBy: sum
+			sourceColumn: Green High
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Blue Low'
+			dataType: int64
+			formatString: 0
+			lineageTag: 3a771fd5-1a92-45d4-9b4d-7cb9447adef4
+			summarizeBy: sum
+			sourceColumn: Blue Low
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Blue High'
+			dataType: int64
+			formatString: 0
+			lineageTag: e3dd612d-495f-44f7-9240-1fcaf06a7564
+			summarizeBy: sum
+			sourceColumn: Blue High
+
+			annotation SummarizationSetBy = Automatic
+
+		column ImpliedColor
+			dataType: string
+			lineageTag: be086d95-e9c6-4f96-a739-d60beec926d8
+			summarizeBy: none
+			sourceColumn: ImpliedColor
+
+			annotation SummarizationSetBy = Automatic
+
+		column Greeting
+			dataType: string
+			lineageTag: f7a8241c-a03b-436d-83bf-f02535619cd1
+			summarizeBy: none
+			sourceColumn: Greeting
+
+			annotation SummarizationSetBy = Automatic
+
+		hierarchy 'Subject Hierarchy'
+			lineageTag: dbc1a332-16f8-477d-af45-9cadbbeb6c26
+
+			level Subject
+				lineageTag: 4844f712-ef0f-4ba4-aa34-e79c177b3d5a
+				column: Subject
+
+			level Course
+				lineageTag: 70cd5d2a-3390-4cd8-b7a8-ac96ba8a3c17
+				column: Course
+
+			level 'Grade Level'
+				lineageTag: 802f0943-ea16-4946-bc02-12eb5f34c422
+				column: 'Grade Level'
+
+		partition CombinedRangeScores = m
+			mode: import
+			source =
+					let
+					    Source = Table.Combine({ELARangeScores, MathRangeScores, ScienceRangeScores}),
+					    #"Removed Columns" = Table.RemoveColumns(Source,{"CompositeKeyELA", "CompositeKeyMath", "CompositeKeyScience"})
+					in
+					    #"Removed Columns"
+
+		annotation PBI_NavigationStepName = Navigation
+
+		annotation PBI_ResultType = Table
+

@@ -1,0 +1,394 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "da20d9e3573156b1d2cb",
+  "position": {
+    "x": 240.81355932203388,
+    "y": 265.22033898305085,
+    "z": 5000,
+    "height": 211.52542372881354,
+    "width": 763.11864406779659
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MathRangeScores"
+                    }
+                  },
+                  "Property": "Course"
+                }
+              },
+              "queryRef": "MathRangeScores.Course",
+              "nativeQueryRef": "Assessment",
+              "displayName": "Assessment"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MathRangeScores"
+                    }
+                  },
+                  "Property": "Grade Level"
+                }
+              },
+              "queryRef": "MathRangeScores.Grade Level",
+              "nativeQueryRef": "Grade Level"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MathRangeScores"
+                    }
+                  },
+                  "Property": "Red Low"
+                }
+              },
+              "queryRef": "MathRangeScores.Red Low",
+              "nativeQueryRef": "Red Low"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MathRangeScores"
+                    }
+                  },
+                  "Property": "Red High"
+                }
+              },
+              "queryRef": "MathRangeScores.Red High",
+              "nativeQueryRef": "Red High"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MathRangeScores"
+                    }
+                  },
+                  "Property": "Green Low"
+                }
+              },
+              "queryRef": "MathRangeScores.Green Low",
+              "nativeQueryRef": "Green Low"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MathRangeScores"
+                    }
+                  },
+                  "Property": "Green High"
+                }
+              },
+              "queryRef": "MathRangeScores.Green High",
+              "nativeQueryRef": "Green High"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MathRangeScores"
+                    }
+                  },
+                  "Property": "Blue Low"
+                }
+              },
+              "queryRef": "MathRangeScores.Blue Low",
+              "nativeQueryRef": "Blue Low"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MathRangeScores"
+                    }
+                  },
+                  "Property": "Blue High"
+                }
+              },
+              "queryRef": "MathRangeScores.Blue High",
+              "nativeQueryRef": "Blue High"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MathRangeScores"
+                    }
+                  },
+                  "Property": "ImpliedColor"
+                }
+              },
+              "queryRef": "MathRangeScores.ImpliedColor",
+              "nativeQueryRef": "ImpliedColor"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "MathRangeScores"
+                  }
+                },
+                "Property": "Course"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#003F60'"
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.Course"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.Grade Level"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.Red Low"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.Red High"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.Green Low"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.Green High"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.Blue Low"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.Blue High"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.ImpliedColor"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "150.6604513678518D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.Course"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "62.68989508405362D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.Red Low"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "74.50846962555508D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.Blue High"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "68.88135987731148D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MathRangeScores.Blue Low"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AlternatingRowsNew'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

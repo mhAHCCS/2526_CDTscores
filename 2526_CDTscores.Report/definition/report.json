@@ -1,0 +1,186 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU10",
+      "reportVersionAtImport": {
+        "visual": "1.8.95",
+        "report": "2.0.95",
+        "page": "1.3.95"
+      },
+      "type": "SharedResources"
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "61c291ff699d48504d6c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "StudentInfo"
+              }
+            },
+            "Property": "STUDENTS.LastFirst"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "s",
+              "Entity": "StudentInfo",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "s"
+                            }
+                          },
+                          "Property": "STUDENTS.LastFirst"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY24SU10",
+          "path": "BaseThemes/CY24SU10.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "CDTscores25266645575968037262.png",
+          "path": "CDTscores25266645575968037262.png",
+          "type": "Image"
+        },
+        {
+          "name": "elaDCs6576064517964997.png",
+          "path": "elaDCs6576064517964997.png",
+          "type": "Image"
+        },
+        {
+          "name": "mathDCs30391945032025935.png",
+          "path": "mathDCs30391945032025935.png",
+          "type": "Image"
+        },
+        {
+          "name": "scienceDCs5624525502394482.png",
+          "path": "scienceDCs5624525502394482.png",
+          "type": "Image"
+        },
+        {
+          "name": "boy591423811559804.png",
+          "path": "boy591423811559804.png",
+          "type": "Image"
+        },
+        {
+          "name": "testStack2861956546182649.png",
+          "path": "testStack2861956546182649.png",
+          "type": "Image"
+        },
+        {
+          "name": "teacher27274035167099618.png",
+          "path": "teacher27274035167099618.png",
+          "type": "Image"
+        },
+        {
+          "name": "beeblackcap-e163605208872491859882198278440153.png",
+          "path": "beeblackcap-e163605208872491859882198278440153.png",
+          "type": "Image"
+        },
+        {
+          "name": "chart59591976360135.jpg",
+          "path": "chart59591976360135.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "avgClassSize9613721917278999.png",
+          "path": "avgClassSize9613721917278999.png",
+          "type": "Image"
+        },
+        {
+          "name": "testStack716920543776349.png",
+          "path": "testStack716920543776349.png",
+          "type": "Image"
+        },
+        {
+          "name": "chart6325726300556088.jpg",
+          "path": "chart6325726300556088.jpg",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

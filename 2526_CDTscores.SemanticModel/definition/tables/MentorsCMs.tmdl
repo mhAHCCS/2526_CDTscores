@@ -1,0 +1,61 @@
+table MentorsCMs
+	lineageTag: 1b636b00-dc8a-4c98-973b-9bc105fadb10
+
+	column 'STUDENTS.State_StudentNumber'
+		dataType: int64
+		formatString: 0
+		lineageTag: 83a1c7cc-824d-438b-90fb-00eaa9f000a5
+		summarizeBy: none
+		sourceColumn: STUDENTS.State_StudentNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'STUDENTS.Student_Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: bd8fc141-5c13-4a75-ac62-b58b2b4c3119
+		summarizeBy: sum
+		sourceColumn: STUDENTS.Student_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Case Manager'
+		dataType: string
+		lineageTag: ec8f5ec9-5564-4a72-b638-d2c4e4a47f35
+		summarizeBy: none
+		sourceColumn: Case Manager
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mentor
+		dataType: string
+		lineageTag: 843da613-f4a2-4ee6-8791-87f694d43e0b
+		summarizeBy: none
+		sourceColumn: Mentor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: 77c0c332-1e64-47c3-bf52-d50ed4aab0af
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	partition MentorsCMs = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("tcp:acsazsqldbprd01.database.windows.net,1433", "acsdb", [Query="WITH cm AS (#(lf)  SELECT #(lf)    [STUDENTS.ID] AS StudentID,#(lf)    [CC.SECTION_NUMBER] AS 'Case Manager'#(lf)  FROM [dbo].[src_powerschool_studentcourses]#(lf)  WHERE [CC.COURSE_NUMBER] = 'CM'#(lf))#(lf)SELECT #(lf)  s.[STUDENTS.State_StudentNumber],#(lf)  s.[STUDENTS.Student_Number],#(lf)  cm.[Case Manager],#(lf)  c.[CC.SECTION_NUMBER] AS 'Mentor'#(lf)FROM [dbo].[src_powerschool_studentcourses] c #(lf)LEFT JOIN cm #(lf)ON cm.[StudentID]=c.[STUDENTS.ID]#(lf)JOIN [dbo].[src_powerschool_students] s #(lf)ON s.[STUDENTS.ID]=c.[STUDENTS.ID]#(lf)WHERE [CC.COURSE_NUMBER] IN ('MEN','QMEN')"]),
+				    #"Sorted Rows" = Table.Sort(Source,{{"Mentor", Order.Descending}}),
+				    #"Added Index" = Table.AddIndexColumn(#"Sorted Rows", "Index", 1, 1, Int64.Type),
+				    #"Removed Duplicates" = Table.Distinct(#"Added Index", {"STUDENTS.State_StudentNumber"})
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

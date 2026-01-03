@@ -1,0 +1,933 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "ScoreRangesDefault",
+  "name": "643782166e3be2c82021",
+  "options": {
+    "targetVisualNames": []
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "d240a229d81483e1b240",
+    "filters": {
+      "byExpr": [
+        {
+          "name": "61c291ff699d48504d6c",
+          "type": "Advanced",
+          "filter": {
+            "Version": 2,
+            "From": [
+              {
+                "Name": "s",
+                "Entity": "StudentInfo",
+                "Type": 0
+              }
+            ],
+            "Where": [
+              {
+                "Condition": {
+                  "Not": {
+                    "Expression": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "s"
+                              }
+                            },
+                            "Property": "STUDENTS.LastFirst"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "null"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "StudentInfo"
+                }
+              },
+              "Property": "STUDENTS.LastFirst"
+            }
+          },
+          "howCreated": 1
+        }
+      ]
+    },
+    "sections": {
+      "d240a229d81483e1b240": {
+        "visualContainers": {
+          "0cfa2d380a96b74e813d": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "3dccfed17014c840ed26": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7cf661e505997b102a43",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ELARangeScores"
+                        }
+                      },
+                      "Property": "Course"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "aa9b2a8ccc86e6928230",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ELARangeScores"
+                        }
+                      },
+                      "Property": "Grade Level"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "20caa59181cd00190171",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ELARangeScores"
+                        }
+                      },
+                      "Property": "Red Low"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dd022c7e18a50ae59519",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ELARangeScores"
+                        }
+                      },
+                      "Property": "Red High"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2324a41f6506c66c56b5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ELARangeScores"
+                        }
+                      },
+                      "Property": "Green Low"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "871a0099407a33a06dd2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ELARangeScores"
+                        }
+                      },
+                      "Property": "Green High"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d2508bc375c205888005",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ELARangeScores"
+                        }
+                      },
+                      "Property": "Blue Low"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f1345c09dc5dd36706b7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ELARangeScores"
+                        }
+                      },
+                      "Property": "Blue High"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fa51e9fd3061c01752c2",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ELARangeScores"
+                        }
+                      },
+                      "Property": "ImpliedColor"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {}
+            }
+          },
+          "3edf6a6d9825ae87300c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "668ed3ed31d04715c088",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "e",
+                        "Entity": "ELARangeScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "e"
+                                      }
+                                    },
+                                    "Property": "Course"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ELARangeScores"
+                        }
+                      },
+                      "Property": "Course"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "e",
+                                "Entity": "ELARangeScores",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "e"
+                                            }
+                                          },
+                                          "Property": "Course"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Reading/Lit Grades 6-HS'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ELARangeScores"
+                        }
+                      },
+                      "Property": "Course"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "6388d1b4b55281da8b10": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9c668528691504d09663",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "s",
+                        "Entity": "ScienceRangeScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "s"
+                                      }
+                                    },
+                                    "Property": "Course"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ScienceRangeScores"
+                        }
+                      },
+                      "Property": "Course"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "s",
+                                "Entity": "ScienceRangeScores",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "s"
+                                            }
+                                          },
+                                          "Property": "Course"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Biology'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ScienceRangeScores"
+                        }
+                      },
+                      "Property": "Course"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "c7c42840c176be5a665a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1663297c797753848020",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "MathRangeScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "m"
+                                      }
+                                    },
+                                    "Property": "Course"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MathRangeScores"
+                        }
+                      },
+                      "Property": "Course"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MathRangeScores"
+                        }
+                      },
+                      "Property": "Course"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "da20d9e3573156b1d2cb": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "75535f53ecb09725de92",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MathRangeScores"
+                        }
+                      },
+                      "Property": "Course"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8befd69da657210dbbde",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MathRangeScores"
+                        }
+                      },
+                      "Property": "Grade Level"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "aa21853fe0c7305bd800",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MathRangeScores"
+                        }
+                      },
+                      "Property": "Red Low"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "388d5e9c949028510e11",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MathRangeScores"
+                        }
+                      },
+                      "Property": "Red High"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8e83df9303dcc0e219ec",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MathRangeScores"
+                        }
+                      },
+                      "Property": "Green Low"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0e2de405109a09daec49",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MathRangeScores"
+                        }
+                      },
+                      "Property": "Green High"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a7398e4880b0879d058e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MathRangeScores"
+                        }
+                      },
+                      "Property": "Blue Low"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "df05858ab1ccbaebe240",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MathRangeScores"
+                        }
+                      },
+                      "Property": "Blue High"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c101e5a86cd8100d151a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MathRangeScores"
+                        }
+                      },
+                      "Property": "ImpliedColor"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MathRangeScores"
+                        }
+                      },
+                      "Property": "Course"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "ee9a2764c5076880ab17": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "f449072ce753b38ed964": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "326c229fd817b5630548",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ScienceRangeScores"
+                        }
+                      },
+                      "Property": "Course"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2f6541e00acb09d797cb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ScienceRangeScores"
+                        }
+                      },
+                      "Property": "Grade Level"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b180b20257751daccb0b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ScienceRangeScores"
+                        }
+                      },
+                      "Property": "Red Low"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0e5f6fe80349d73ca42c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ScienceRangeScores"
+                        }
+                      },
+                      "Property": "Red High"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1ffee02840b22925cb16",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ScienceRangeScores"
+                        }
+                      },
+                      "Property": "Green Low"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9706abd06945ea272d32",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ScienceRangeScores"
+                        }
+                      },
+                      "Property": "Green High"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6f9d25840044734e2eca",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ScienceRangeScores"
+                        }
+                      },
+                      "Property": "Blue Low"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "11a98c39ab97e77246b2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ScienceRangeScores"
+                        }
+                      },
+                      "Property": "Blue High"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7e9af38990a9be0e875e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ScienceRangeScores"
+                        }
+                      },
+                      "Property": "ImpliedColor"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {}
+            }
+          },
+          "fef5dafcdb35907b0a81": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,748 @@
+table BatchDownload
+	lineageTag: d038e7d1-ac9e-4e48-a15b-0817798aa7e9
+
+	column 'Content Area'
+		dataType: string
+		lineageTag: d09705e3-6fcb-4b41-9a3b-6a71cc88ef57
+		summarizeBy: none
+		sourceColumn: Content Area
+
+		annotation SummarizationSetBy = Automatic
+
+	column Grade
+		dataType: int64
+		formatString: 0
+		lineageTag: 0609e84f-79f3-494d-8a8e-f01f2099c746
+		summarizeBy: sum
+		sourceColumn: Grade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Assessment Name'
+		dataType: string
+		lineageTag: b0c62805-ade8-42fc-b1a3-107ef5ff404b
+		summarizeBy: none
+		sourceColumn: Assessment Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DRC INSIGHT Test Name'
+		dataType: string
+		lineageTag: c4a47607-cb3a-432e-a1ae-4bafc2a6eb6a
+		summarizeBy: none
+		sourceColumn: DRC INSIGHT Test Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Starting Tested Date'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: d0c75388-7e75-414f-9111-bf63290e23ed
+		summarizeBy: none
+		sourceColumn: Starting Tested Date
+
+		variation Variation
+			isDefault
+			relationship: 4eba4f8f-d17b-489d-9b14-05bd0caeb007
+			defaultHierarchy: LocalDateTable_c798956a-64f0-4347-9866-3a9f7332dd9b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Starting Tested Time'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 1c3f648c-9ccc-4cb7-a6e6-874e811678de
+		summarizeBy: none
+		sourceColumn: Starting Tested Time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column 'Ending Tested Date'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: a359b107-c702-490b-a06b-6672b0401e93
+		summarizeBy: none
+		sourceColumn: Ending Tested Date
+
+		variation Variation
+			isDefault
+			relationship: 1bf52c7f-8b7d-474f-bdd4-9f75dba22968
+			defaultHierarchy: LocalDateTable_8e2c84ec-027b-430b-afac-17a85a054655.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Ending Tested Time'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: b6f40e13-979f-4ef8-833f-945417e9db0b
+		summarizeBy: none
+		sourceColumn: Ending Tested Time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column 'Assessment Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: cffc7309-e20a-45a4-8885-885972006bb5
+		summarizeBy: sum
+		sourceColumn: Assessment Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Test Session Name'
+		dataType: string
+		lineageTag: c7f13874-ccd6-486b-8250-1e4d2e871a72
+		summarizeBy: none
+		sourceColumn: Test Session Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAsecureID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7999bfa9-f78e-44c1-a636-84791ce7f427
+		summarizeBy: none
+		sourceColumn: PAsecureID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Student Last Name'
+		dataType: string
+		lineageTag: 7f4b5e74-5c33-430b-ac09-c7718b1af3a3
+		summarizeBy: none
+		sourceColumn: Student Last Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Student First Name'
+		dataType: string
+		lineageTag: 1a626f30-216c-4ab2-87cc-34c74968e8f8
+		summarizeBy: none
+		sourceColumn: Student First Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Student Middle Initial'
+		dataType: string
+		lineageTag: 88dac5ce-5e41-4995-83f0-623da11181cd
+		summarizeBy: none
+		sourceColumn: Student Middle Initial
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Scale Score for Test'
+		dataType: int64
+		formatString: 0
+		lineageTag: a586d4f8-5835-4a0b-86a7-878e67cc4f10
+		summarizeBy: sum
+		sourceColumn: Total Scale Score for Test
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scale Score for DC 1'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9beb9f2f-9dc6-4998-b391-912f728b188f
+		summarizeBy: sum
+		sourceColumn: Scale Score for DC 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scale Score for DC 2'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a52f22b-30bb-4303-a34a-37d9eb66ae78
+		summarizeBy: sum
+		sourceColumn: Scale Score for DC 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scale Score for DC 3'
+		dataType: int64
+		formatString: 0
+		lineageTag: 71c1f830-96d6-42d2-b215-9a567b41e126
+		summarizeBy: sum
+		sourceColumn: Scale Score for DC 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scale Score for DC 4'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b329aee-2b03-410f-abcc-b19e208a7abf
+		summarizeBy: sum
+		sourceColumn: Scale Score for DC 4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scale Score for DC 5'
+		dataType: int64
+		formatString: 0
+		lineageTag: 728bdca4-19a0-4c52-97f8-7566b28451e0
+		summarizeBy: sum
+		sourceColumn: Scale Score for DC 5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SEM Upper for Total Scale Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: 93853676-c2c7-475e-813a-9216dd044c9a
+		summarizeBy: sum
+		sourceColumn: SEM Upper for Total Scale Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SEM Upper for DC 1 Scale Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: dfb295c8-fc94-4200-8633-769fe4cdcc9a
+		summarizeBy: sum
+		sourceColumn: SEM Upper for DC 1 Scale Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SEM Upper for DC 2 Scale Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: cbcb1b4b-b496-49f4-936f-2c11c0dc7cf6
+		summarizeBy: sum
+		sourceColumn: SEM Upper for DC 2 Scale Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SEM Upper for DC 3 Scale Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: b41d114b-222d-40e0-8e32-4e207559b008
+		summarizeBy: sum
+		sourceColumn: SEM Upper for DC 3 Scale Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SEM Upper for DC 4 Scale Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: 64777620-710f-4a86-919e-2eb9746840c0
+		summarizeBy: sum
+		sourceColumn: SEM Upper for DC 4 Scale Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SEM Upper for DC 5 Scale Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: e16e167c-4c19-4b91-9f31-3c576b7b65bc
+		summarizeBy: sum
+		sourceColumn: SEM Upper for DC 5 Scale Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SEM Lower for Total Scale Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: a7c8e0e6-4730-4675-860e-55cac310a4bf
+		summarizeBy: sum
+		sourceColumn: SEM Lower for Total Scale Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SEM Lower for DC 1 Scale Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: bbd6e311-7e06-4b9e-88e9-ce89e8d5a5a8
+		summarizeBy: sum
+		sourceColumn: SEM Lower for DC 1 Scale Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SEM Lower for DC 2 Scale Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: c76b0094-4293-4c14-a8e9-d55465746a55
+		summarizeBy: sum
+		sourceColumn: SEM Lower for DC 2 Scale Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SEM Lower for DC 3 Scale Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1447bace-e804-4adb-a50a-64312984c0de
+		summarizeBy: sum
+		sourceColumn: SEM Lower for DC 3 Scale Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SEM Lower for DC 4 Scale Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b5bf9c3-1090-40b1-a630-b8216baa4d35
+		summarizeBy: sum
+		sourceColumn: SEM Lower for DC 4 Scale Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SEM Lower for DC 5 Scale Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0935ddff-d39c-4ccd-b0fe-8bbf87ede39a
+		summarizeBy: sum
+		sourceColumn: SEM Lower for DC 5 Scale Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'On Track Indicator'
+		dataType: string
+		lineageTag: b3027b07-7d5f-49de-87b1-56d10397f7c3
+		summarizeBy: none
+		sourceColumn: On Track Indicator
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Local ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1793ecc0-92b2-4ce2-ba98-38882b48aa33
+		summarizeBy: count
+		sourceColumn: Local ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AHCCSsession
+		dataType: string
+		lineageTag: b07456d5-430a-4180-9364-1d6df98cbf75
+		summarizeBy: none
+		sourceColumn: AHCCSsession
+
+		annotation SummarizationSetBy = Automatic
+
+	column Teacher
+		dataType: string
+		lineageTag: 8c316ad3-b9d8-4460-9d56-6531747af6bb
+		summarizeBy: none
+		sourceColumn: Teacher
+
+		annotation SummarizationSetBy = Automatic
+
+	column DC1ScoreColor = ```
+			
+			VAR Score = 'BatchDownload'[Scale Score for DC 1]
+			VAR AssessmentCategory = 'BatchDownload'[AssessmentCategory]
+			VAR MathColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('MathRangeScores'[Red Low]) && Score <= RELATED('MathRangeScores'[Red High]), "Red",
+			        Score >= RELATED('MathRangeScores'[Green Low]) && Score <= RELATED('MathRangeScores'[Green High]), "Green",
+			        Score >= RELATED('MathRangeScores'[Blue Low]) && Score <= RELATED('MathRangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			VAR ELAColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('ELARangeScores'[Red Low]) && Score <= RELATED('ELARangeScores'[Red High]), "Red",
+			        Score >= RELATED('ELARangeScores'[Green Low]) && Score <= RELATED('ELARangeScores'[Green High]), "Green",
+			        Score >= RELATED('ELARangeScores'[Blue Low]) && Score <= RELATED('ELARangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			VAR ScienceColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('ScienceRangeScores'[Red Low]) && Score <= RELATED('ScienceRangeScores'[Red High]), "Red",
+			        Score >= RELATED('ScienceRangeScores'[Green Low]) && Score <= RELATED('ScienceRangeScores'[Green High]), "Green",
+			        Score >= RELATED('ScienceRangeScores'[Blue Low]) && Score <= RELATED('ScienceRangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			RETURN
+			    SWITCH(AssessmentCategory,
+			        "Math", MathColor,
+			        "ELA", ELAColor,
+			        "Science", ScienceColor,
+			        BLANK()
+			    )
+			```
+		lineageTag: f36f4ee5-ab63-4dee-b0d2-a473602d0579
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentCategory =
+			
+			SWITCH(TRUE(),
+			    [Assessment Name] IN {"Reading/Lit Grades 6-HS", "Writing/Eng Comp Gr 6-HS", "English Composition", "Literature"}, "ELA",
+			    [Assessment Name] IN {"Math Grades 6-8", "Algebra I", "Algebra II", "Geometry"}, "Math",
+			    [Assessment Name] IN {"Science Grades 6-HS", "Biology", "Chemistry"}, "Science",
+			    "Other"
+			)
+		lineageTag: 1674f868-0175-43f4-a666-f52ed2237717
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column CKBatchAssmtnameGrade
+		dataType: string
+		lineageTag: d06eb371-cd9d-4f09-8653-76d9a833745b
+		summarizeBy: none
+		sourceColumn: CKBatchAssmtnameGrade
+
+		annotation SummarizationSetBy = Automatic
+
+	column DC2ScoreColor = ```
+			
+			VAR Score = 'BatchDownload'[Scale Score for DC 2]
+			VAR AssessmentCategory = 'BatchDownload'[AssessmentCategory]
+			VAR MathColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('MathRangeScores'[Red Low]) && Score <= RELATED('MathRangeScores'[Red High]), "Red",
+			        Score >= RELATED('MathRangeScores'[Green Low]) && Score <= RELATED('MathRangeScores'[Green High]), "Green",
+			        Score >= RELATED('MathRangeScores'[Blue Low]) && Score <= RELATED('MathRangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			VAR ELAColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('ELARangeScores'[Red Low]) && Score <= RELATED('ELARangeScores'[Red High]), "Red",
+			        Score >= RELATED('ELARangeScores'[Green Low]) && Score <= RELATED('ELARangeScores'[Green High]), "Green",
+			        Score >= RELATED('ELARangeScores'[Blue Low]) && Score <= RELATED('ELARangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			VAR ScienceColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('ScienceRangeScores'[Red Low]) && Score <= RELATED('ScienceRangeScores'[Red High]), "Red",
+			        Score >= RELATED('ScienceRangeScores'[Green Low]) && Score <= RELATED('ScienceRangeScores'[Green High]), "Green",
+			        Score >= RELATED('ScienceRangeScores'[Blue Low]) && Score <= RELATED('ScienceRangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			RETURN
+			    SWITCH(AssessmentCategory,
+			        "Math", MathColor,
+			        "ELA", ELAColor,
+			        "Science", ScienceColor,
+			        BLANK()
+			    )
+			```
+		lineageTag: 4289f251-f0cb-43f0-a672-0c1ae028af2a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column DC3ScoreColor = ```
+			
+			VAR Score = 'BatchDownload'[Scale Score for DC 3]
+			VAR AssessmentCategory = 'BatchDownload'[AssessmentCategory]
+			VAR MathColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('MathRangeScores'[Red Low]) && Score <= RELATED('MathRangeScores'[Red High]), "Red",
+			        Score >= RELATED('MathRangeScores'[Green Low]) && Score <= RELATED('MathRangeScores'[Green High]), "Green",
+			        Score >= RELATED('MathRangeScores'[Blue Low]) && Score <= RELATED('MathRangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			VAR ELAColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('ELARangeScores'[Red Low]) && Score <= RELATED('ELARangeScores'[Red High]), "Red",
+			        Score >= RELATED('ELARangeScores'[Green Low]) && Score <= RELATED('ELARangeScores'[Green High]), "Green",
+			        Score >= RELATED('ELARangeScores'[Blue Low]) && Score <= RELATED('ELARangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			VAR ScienceColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('ScienceRangeScores'[Red Low]) && Score <= RELATED('ScienceRangeScores'[Red High]), "Red",
+			        Score >= RELATED('ScienceRangeScores'[Green Low]) && Score <= RELATED('ScienceRangeScores'[Green High]), "Green",
+			        Score >= RELATED('ScienceRangeScores'[Blue Low]) && Score <= RELATED('ScienceRangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			RETURN
+			    SWITCH(AssessmentCategory,
+			        "Math", MathColor,
+			        "ELA", ELAColor,
+			        "Science", ScienceColor,
+			        BLANK()
+			    )
+			```
+		lineageTag: bb242646-6ba0-4226-a98d-af6528fa21f8
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column DC4ScoreColor = ```
+			
+			VAR Score = 'BatchDownload'[Scale Score for DC 4]
+			VAR AssessmentCategory = 'BatchDownload'[AssessmentCategory]
+			VAR MathColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('MathRangeScores'[Red Low]) && Score <= RELATED('MathRangeScores'[Red High]), "Red",
+			        Score >= RELATED('MathRangeScores'[Green Low]) && Score <= RELATED('MathRangeScores'[Green High]), "Green",
+			        Score >= RELATED('MathRangeScores'[Blue Low]) && Score <= RELATED('MathRangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			VAR ELAColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('ELARangeScores'[Red Low]) && Score <= RELATED('ELARangeScores'[Red High]), "Red",
+			        Score >= RELATED('ELARangeScores'[Green Low]) && Score <= RELATED('ELARangeScores'[Green High]), "Green",
+			        Score >= RELATED('ELARangeScores'[Blue Low]) && Score <= RELATED('ELARangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			VAR ScienceColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('ScienceRangeScores'[Red Low]) && Score <= RELATED('ScienceRangeScores'[Red High]), "Red",
+			        Score >= RELATED('ScienceRangeScores'[Green Low]) && Score <= RELATED('ScienceRangeScores'[Green High]), "Green",
+			        Score >= RELATED('ScienceRangeScores'[Blue Low]) && Score <= RELATED('ScienceRangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			RETURN
+			    SWITCH(AssessmentCategory,
+			        "Math", MathColor,
+			        "ELA", ELAColor,
+			        "Science", ScienceColor,
+			        BLANK()
+			    )
+			```
+		lineageTag: ba68745a-34db-4fcb-bc79-402c569c5528
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column DC5ScoreColor = ```
+			
+			VAR Score = 'BatchDownload'[Scale Score for DC 5]
+			VAR AssessmentCategory = 'BatchDownload'[AssessmentCategory]
+			VAR MathColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('MathRangeScores'[Red Low]) && Score <= RELATED('MathRangeScores'[Red High]), "Red",
+			        Score >= RELATED('MathRangeScores'[Green Low]) && Score <= RELATED('MathRangeScores'[Green High]), "Green",
+			        Score >= RELATED('MathRangeScores'[Blue Low]) && Score <= RELATED('MathRangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			VAR ELAColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('ELARangeScores'[Red Low]) && Score <= RELATED('ELARangeScores'[Red High]), "Red",
+			        Score >= RELATED('ELARangeScores'[Green Low]) && Score <= RELATED('ELARangeScores'[Green High]), "Green",
+			        Score >= RELATED('ELARangeScores'[Blue Low]) && Score <= RELATED('ELARangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			VAR ScienceColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('ScienceRangeScores'[Red Low]) && Score <= RELATED('ScienceRangeScores'[Red High]), "Red",
+			        Score >= RELATED('ScienceRangeScores'[Green Low]) && Score <= RELATED('ScienceRangeScores'[Green High]), "Green",
+			        Score >= RELATED('ScienceRangeScores'[Blue Low]) && Score <= RELATED('ScienceRangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			RETURN
+			    SWITCH(AssessmentCategory,
+			        "Math", MathColor,
+			        "ELA", ELAColor,
+			        "Science", ScienceColor,
+			        BLANK()
+			    )
+			```
+		lineageTag: 5cd33c31-98bc-417e-b4fd-c0b8bd37d9c8
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column SEMrange = ```
+			
+			  [SEM Upper for Total Scale Score] - [SEM Lower for Total Scale Score]
+			```
+		formatString: 0
+		lineageTag: 1adf3dcb-67a0-4eeb-b12b-6c47034dd327
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalScaleScoreColor = ```
+			
+			VAR Score = 'BatchDownload'[Total Scale Score for Test]
+			VAR AssessmentCategory = 'BatchDownload'[AssessmentCategory]
+			VAR MathColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('MathRangeScores'[Red Low]) && Score <= RELATED('MathRangeScores'[Red High]), "Red",
+			        Score >= RELATED('MathRangeScores'[Green Low]) && Score <= RELATED('MathRangeScores'[Green High]), "Green",
+			        Score >= RELATED('MathRangeScores'[Blue Low]) && Score <= RELATED('MathRangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			VAR ELAColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('ELARangeScores'[Red Low]) && Score <= RELATED('ELARangeScores'[Red High]), "Red",
+			        Score >= RELATED('ELARangeScores'[Green Low]) && Score <= RELATED('ELARangeScores'[Green High]), "Green",
+			        Score >= RELATED('ELARangeScores'[Blue Low]) && Score <= RELATED('ELARangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			VAR ScienceColor = 
+			    SWITCH(TRUE(),
+			        Score >= RELATED('ScienceRangeScores'[Red Low]) && Score <= RELATED('ScienceRangeScores'[Red High]), "Red",
+			        Score >= RELATED('ScienceRangeScores'[Green Low]) && Score <= RELATED('ScienceRangeScores'[Green High]), "Green",
+			        Score >= RELATED('ScienceRangeScores'[Blue Low]) && Score <= RELATED('ScienceRangeScores'[Blue High]), "Blue",
+			        BLANK()
+			    )
+			RETURN
+			    SWITCH(AssessmentCategory,
+			        "Math", MathColor,
+			        "ELA", ELAColor,
+			        "Science", ScienceColor,
+			        BLANK()
+			    )
+			```
+		lineageTag: d20cb37b-10c9-476b-8fdb-65798980b8d3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column FinishedSameDay
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 21bbd519-d717-491b-932a-3a2cecfc9ace
+		summarizeBy: none
+		sourceColumn: FinishedSameDay
+
+		annotation SummarizationSetBy = Automatic
+
+	column TestDurationMinutes
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c41b968-b12d-485c-9219-111ba5a57a9c
+		summarizeBy: sum
+		sourceColumn: TestDurationMinutes
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDateTime =
+			
+			IF (
+			    NOT ISBLANK([Ending Tested Date]) && NOT ISBLANK([Ending Tested Time]),
+			    DATEVALUE([Ending Tested Date]) + TIMEVALUE([Ending Tested Time]),
+			    BLANK()
+			)
+		formatString: General Date
+		lineageTag: ae0e64a7-5ae3-46da-80bf-0c75af75b54b
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 6b3d6700-5268-4c6f-a6d9-53a7ae5195e7
+			defaultHierarchy: LocalDateTable_1b9d6f46-057a-45de-a831-934914ebfab1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberRed = ```
+			
+			VAR DC1_Red = IF('BatchDownload'[DC1ScoreColor] = "Red", 1, 0)
+			VAR DC2_Red = IF('BatchDownload'[DC2ScoreColor] = "Red", 1, 0)
+			VAR DC3_Red = IF('BatchDownload'[DC3ScoreColor] = "Red", 1, 0)
+			VAR DC4_Red = IF('BatchDownload'[DC4ScoreColor] = "Red", 1, 0)
+			VAR DC5_Red = IF('BatchDownload'[DC5ScoreColor] = "Red", 1, 0)
+			RETURN
+			DC1_Red + DC2_Red + DC3_Red + DC4_Red + DC5_Red
+			
+			```
+		formatString: 0
+		lineageTag: f3bba312-6ea4-4b6a-92eb-220000e56f95
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column PercentBlue = ```
+			
+			VAR DC1_Blue = IF('BatchDownload'[DC1ScoreColor] = "Blue", 1, 0)
+			VAR DC2_Blue = IF('BatchDownload'[DC2ScoreColor] = "Blue", 1, 0)
+			VAR DC3_Blue = IF('BatchDownload'[DC3ScoreColor] = "Blue", 1, 0)
+			VAR DC4_Blue = IF('BatchDownload'[DC4ScoreColor] = "Blue", 1, 0)
+			VAR DC5_Blue = IF('BatchDownload'[DC5ScoreColor] = "Blue", 1, 0)
+			VAR BlueCount = DC1_Blue + DC2_Blue + DC3_Blue + DC4_Blue + DC5_Blue
+			
+			VAR TotalScores = 
+			    COUNTAX(
+			        { 'BatchDownload'[DC1ScoreColor], 'BatchDownload'[DC2ScoreColor], 'BatchDownload'[DC3ScoreColor], 
+			          'BatchDownload'[DC4ScoreColor], 'BatchDownload'[DC5ScoreColor] },
+			        IF(NOT(ISBLANK([Value])), 1, BLANK())
+			    )
+			
+			RETURN
+			IF(TotalScores > 0, BlueCount / TotalScores * 100, 0)
+			
+			```
+		lineageTag: d0a4e1ed-1c97-4800-878a-b075c296ae53
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PercentGreen = ```
+			
+			VAR DC1_Green = IF('BatchDownload'[DC1ScoreColor] = "Green", 1, 0)
+			VAR DC2_Green = IF('BatchDownload'[DC2ScoreColor] = "Green", 1, 0)
+			VAR DC3_Green = IF('BatchDownload'[DC3ScoreColor] = "Green", 1, 0)
+			VAR DC4_Green = IF('BatchDownload'[DC4ScoreColor] = "Green", 1, 0)
+			VAR DC5_Green = IF('BatchDownload'[DC5ScoreColor] = "Green", 1, 0)
+			VAR GreenCount = DC1_Green + DC2_Green + DC3_Green + DC4_Green + DC5_Green
+			
+			VAR TotalScores = 
+			    COUNTAX(
+			        { 'BatchDownload'[DC1ScoreColor], 'BatchDownload'[DC2ScoreColor], 'BatchDownload'[DC3ScoreColor], 
+			          'BatchDownload'[DC4ScoreColor], 'BatchDownload'[DC5ScoreColor] },
+			        IF(NOT(ISBLANK([Value])), 1, BLANK())
+			    )
+			
+			RETURN
+			IF(TotalScores > 0, GreenCount / TotalScores * 100, 0)
+			
+			```
+		lineageTag: 50c989dd-ab57-4cf1-b742-1c79d032c542
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition BatchDownload = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("tcp:acsazsqldbprd01.database.windows.net,1433", "acsdb"),
+				    dbo_drc_batchDL = Source{[Schema="dbo",Item="drc_batchDL"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dbo_drc_batchDL,{{"Grade", Int64.Type}, {"Assessment Number", Int64.Type}, {"PAsecureID", Int64.Type}, {"Total Scale Score for Test", Int64.Type}, {"Scale Score for DC 1", Int64.Type}, {"Scale Score for DC 2", Int64.Type}, {"Scale Score for DC 3", Int64.Type}, {"Scale Score for DC 4", Int64.Type}, {"Scale Score for DC 5", Int64.Type}, {"SEM Upper for Total Scale Score", Int64.Type}, {"SEM Upper for DC 1 Scale Score", Int64.Type}, {"SEM Upper for DC 2 Scale Score", Int64.Type}, {"SEM Upper for DC 3 Scale Score", Int64.Type}, {"SEM Upper for DC 4 Scale Score", Int64.Type}, {"SEM Upper for DC 5 Scale Score", Int64.Type}, {"SEM Lower for Total Scale Score", Int64.Type}, {"SEM Lower for DC 2 Scale Score", Int64.Type}, {"SEM Lower for DC 3 Scale Score", Int64.Type}, {"SEM Lower for DC 4 Scale Score", Int64.Type}, {"SEM Lower for DC 5 Scale Score", Int64.Type}, {"Local ID", Int64.Type}, {"SEM Lower for DC 1 Scale Score", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"District Code", "School Code", "DOB"}),
+				    #"Replaced Value" = List.Accumulate(
+				    {
+				        {"2526_Career Biology: 7(B-D)_MARAZ", "CareerBiology7-1-Maraz"},
+				        {"2526_Career Biology: 5(B-D)_MARAZ", "CareerBiology5-1-Maraz"},
+				        {"2526_CP Biology: 4(B-D)_MARAZ", "CPBiology4-1-Maraz"},
+				        {"2526_Honors Biology: 2(B-D)_MARAZ", "HonorsBiology2-1-Maraz"}
+				    },
+				    #"Removed Columns",
+				    (state, current) =>
+				        Table.ReplaceValue(
+				            state,
+				            current{0},
+				            current{1},
+				            Replacer.ReplaceText,
+				            {"Test Session Name"}
+				        )
+				),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","Pre-Algebra","PreAlgebra",Replacer.ReplaceText,{"Test Session Name"}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value1", "Starting Tested Date-Time", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Starting Tested Date-Time.1", "Starting Tested Date-Time.2"}),
+				    #"Split Column by Delimiter1" = Table.SplitColumn(#"Split Column by Delimiter", "Ending Tested Date-Time", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Ending Tested Date-Time.1", "Ending Tested Date-Time.2"}),
+				    #"Inserted Text Between Delimiters" = Table.AddColumn(#"Split Column by Delimiter1", "AHCCSsession", each Text.BetweenDelimiters([Test Session Name], "-", "-"), type text),
+				    #"Inserted Text After Delimiter" = Table.AddColumn(#"Inserted Text Between Delimiters", "Teacher", each Text.AfterDelimiter([Test Session Name], "-", 1), type text),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Inserted Text After Delimiter",{{"Ending Tested Date-Time.1", type date}, {"Starting Tested Date-Time.1", type date}, {"Starting Tested Date-Time.2", type time}, {"Ending Tested Date-Time.2", type time}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"Starting Tested Date-Time.1", "Starting Tested Date"}, {"Starting Tested Date-Time.2", "Starting Tested Time"}, {"Ending Tested Date-Time.1", "Ending Tested Date"}, {"Ending Tested Date-Time.2", "Ending Tested Time"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "CKBatchAssmtnameGrade", each [Assessment Name] & Text.From([Grade])),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "FinishedSameDay", each [Starting Tested Date] = [Ending Tested Date]),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom1",{{"FinishedSameDay", type logical}}),
+				    #"Added Custom2" = Table.AddColumn(#"Changed Type2", "TestDurationMinutes", each if [FinishedSameDay] then
+				    Duration.TotalMinutes([Ending Tested Time] - [Starting Tested Time])
+				else
+				    null),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Added Custom2",{{"TestDurationMinutes", Int64.Type}})
+				in
+				    #"Changed Type3"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

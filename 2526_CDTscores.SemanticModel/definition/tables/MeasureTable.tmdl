@@ -1,0 +1,106 @@
+table MeasureTable
+	lineageTag: 6310195c-0b20-4534-a5ab-c306e8405431
+
+	measure NameHasData = ```
+			
+			IF (
+			    CALCULATE (
+			        COUNTROWS ( BatchDownload ),
+			        BatchDownload[PAsecureID] = SELECTEDVALUE ( StudentInfo[STUDENTS.State_StudentNumber] )
+			    ) > 0,
+			    1,
+			    0
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 9fb68622-8960-411c-8975-32c53671b2a6
+
+	measure Top_Percent_Filtered_Overall =
+			
+			VAR SelectedPercent = SELECTEDVALUE('Top Percentage Filter'[Top Percentage Filter]) / 100
+			VAR TotalRecords = COUNTROWS(ALLSELECTED('BatchDownload'))
+			VAR TopNum = ROUNDUP(TotalRecords * SelectedPercent, 0)
+			
+			RETURN
+			IF(
+			    RANKX(ALLSELECTED('BatchDownload'), CALCULATE(SUM('BatchDownload'[Total Scale Score for Test])), , DESC) <= TopNum,
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: e5693932-53d7-478f-8fdd-b14bf0ef9f37
+
+	measure TopX_Avg_Overall =
+			
+			CALCULATE(
+			    AVERAGE('BatchDownload'[Total Scale Score for Test]),
+			    FILTER('BatchDownload', [Top_Percent_Filtered_Overall] = 1)
+			)
+		formatString: 0
+		lineageTag: 41b6f399-a7ee-4604-8c37-ca7c421ba7bb
+
+	measure TopX_Color_Count = ```
+			
+			VAR TopRows =
+			    FILTER(
+			        ALLSELECTED('BatchDownload'),
+			        [Top_Percent_Filtered_Overall] = 1
+			    )
+			RETURN
+			CALCULATE(
+			    COUNTROWS('BatchDownload'),
+			    KEEPFILTERS(TopRows)   -- keeps the visual’s color filter + top N% filter
+			)
+			
+			```
+		formatString: 0
+		lineageTag: eb001efb-b59d-4cbf-8e45-6a276d3345f1
+
+	measure TopX_Overall_Color =
+			
+			VAR TopXFilter =
+			    TOPN(
+			        [Top Percentage Filter Value],  -- Assuming you have a What-If parameter for Top X%
+			        ALLSELECTED('BatchDownload'),
+			        'BatchDownload'[Total Scale Score for Test], DESC
+			    )
+			VAR FilteredTable =
+			    FILTER(
+			        TopXFilter,
+			        NOT(ISBLANK('BatchDownload'[TotalScaleScoreColor]))
+			    )
+			RETURN
+			    COUNTROWS(FilteredTable)
+		formatString: 0
+		lineageTag: 28504603-7a2f-4705-973e-79272100d51f
+
+	measure TopX_Student_Count =
+			
+			CALCULATE(
+			    DISTINCTCOUNT('BatchDownload'[Local ID]),
+			    FILTER('BatchDownload', [Top_Percent_Filtered_Overall] = 1)
+			)
+		formatString: 0
+		lineageTag: 8887c62e-66ac-4b6b-8118-ab7a827b72a3
+
+	measure TopX_Test_Count =
+			
+			CALCULATE(
+			    COUNT('BatchDownload'[Assessment Number]),
+			    FILTER('BatchDownload', [Top_Percent_Filtered_Overall] = 1)
+			)
+		formatString: 0
+		lineageTag: f2e7d7a0-936f-474a-bcd3-20bcd0b7ccf3
+
+	partition MeasureTable = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Measures = _t]),
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Measures"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

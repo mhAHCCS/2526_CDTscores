@@ -1,0 +1,33 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop"]
+
+annotation PBI_QueryOrder = ["BatchDownload","MathRangeScores","ELARangeScores","ScienceRangeScores","MeasureTable","MentorsCMs","Counselors","StudentInfo","Courses"]
+
+ref table BatchDownload
+ref table DateTableTemplate_667d3228-513e-474e-84f4-621ce5dd109a
+ref table LocalDateTable_c798956a-64f0-4347-9866-3a9f7332dd9b
+ref table LocalDateTable_8e2c84ec-027b-430b-afac-17a85a054655
+ref table MathRangeScores
+ref table ELARangeScores
+ref table ScienceRangeScores
+ref table MeasureTable
+ref table MentorsCMs
+ref table Counselors
+ref table StudentInfo
+ref table LocalDateTable_4a4b5118-a8a8-41c6-9a4e-295b3cf05c2f
+ref table LocalDateTable_06331206-b5dd-411c-b5ec-c74a78ffa71d
+ref table LocalDateTable_1b9d6f46-057a-45de-a831-934914ebfab1
+ref table 'Top Percentage Filter'
+ref table Courses
+
+ref cultureInfo en-US
+

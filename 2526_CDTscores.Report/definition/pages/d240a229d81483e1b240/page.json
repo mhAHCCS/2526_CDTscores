@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "d240a229d81483e1b240",
+  "displayName": "Color Range Cutoffs",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#003F60'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "85D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "3edf6a6d9825ae87300c",
+      "target": "da20d9e3573156b1d2cb",
+      "type": "NoFilter"
+    },
+    {
+      "source": "3edf6a6d9825ae87300c",
+      "target": "f449072ce753b38ed964",
+      "type": "NoFilter"
+    },
+    {
+      "source": "c7c42840c176be5a665a",
+      "target": "3dccfed17014c840ed26",
+      "type": "NoFilter"
+    },
+    {
+      "source": "c7c42840c176be5a665a",
+      "target": "f449072ce753b38ed964",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6388d1b4b55281da8b10",
+      "target": "3dccfed17014c840ed26",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6388d1b4b55281da8b10",
+      "target": "da20d9e3573156b1d2cb",
+      "type": "NoFilter"
+    }
+  ]
+}

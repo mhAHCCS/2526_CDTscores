@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "2526_CDTscores"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4f4f3e59-30b0-47de-8dd9-06681c07ab02"
+  }
+}

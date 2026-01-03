@@ -1,0 +1,41 @@
+table Counselors
+	lineageTag: 08b058fd-ac93-4d3a-a353-c5aa8267e395
+
+	column 'STUDENTS.State_StudentNumber'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f4ad205-4908-47ae-a27a-c762b9e71ab2
+		summarizeBy: none
+		sourceColumn: STUDENTS.State_StudentNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'STUDENTS.Student_Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3031dd6a-3b77-410a-93dc-98fb6f3e4399
+		summarizeBy: sum
+		sourceColumn: STUDENTS.Student_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Counselor
+		dataType: string
+		lineageTag: 1cd597da-6c10-47b1-9077-ce71e1151666
+		summarizeBy: none
+		sourceColumn: Counselor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Counselors = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("tcp:acsazsqldbprd01.database.windows.net,1433", "acsdb", [Query="WITH quest AS (#(lf)SELECT #(lf)    [STUDENTS.STATE_STUDENTNUMBER],#(lf)      MAX(CASE #(lf)         WHEN [COURSES.COURSE_NAME] LIKE 'QUEST%' THEN 'Y'#(lf)         ELSE 'N'#(lf)        END) AS [IsQuest]#(lf)    FROM [dbo].[src_powerschool_studentcourses]#(lf)    GROUP BY [STUDENTS.STATE_STUDENTNUMBER]#(lf))#(lf)#(lf)SELECT#(lf)  s.[STUDENTS.State_StudentNumber],#(lf)  s.[STUDENTS.Student_Number],#(lf)  CASE #(lf)    WHEN quest.[IsQuest] = 'Y' THEN 'Botes'#(lf)    WHEN (s.[S_PA_STU_X.is_sped_student_yn] = 1#(lf)      AND s.[STUDENTS.Grade_Level] = 12) THEN 'Galie'#(lf)    WHEN s.[STUDENTS.Grade_Level] IN (7,8) THEN 'Botes'#(lf)    WHEN s.[STUDENTS.Last_Name] < 'D' THEN 'Botes'#(lf)    WHEN s.[STUDENTS.Last_Name] < 'K' THEN 'Jones'#(lf)    WHEN s.[STUDENTS.Last_Name] < 'R' THEN 'Soika'#(lf)    ELSE 'Ziegler' #(lf)  END AS Counselor#(lf)FROM [dbo].[src_powerschool_students] s#(lf)LEFT JOIN quest #(lf)ON quest.[STUDENTS.STATE_STUDENTNUMBER]=s.[STUDENTS.State_StudentNumber]#(lf)WHERE s.[STUDENTS.Enroll_Status] = 0#(lf)  AND s.[STUDENTS.State_StudentNumber] > 1000#(lf)ORDER BY s.[STUDENTS.LastFirst]"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

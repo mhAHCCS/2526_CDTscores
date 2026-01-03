@@ -1,0 +1,122 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "98aed6c7efd2708d4ca8",
+  "position": {
+    "x": 961.6,
+    "y": 36.8,
+    "z": 17000,
+    "height": 436.8,
+    "width": 318.4,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "stackedAreaChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "StudentInfo"
+                    }
+                  },
+                  "Property": "EconomicallyDisadvantaged"
+                }
+              },
+              "queryRef": "StudentInfo.EconomicallyDisadvantaged",
+              "nativeQueryRef": "EconomicallyDisadvantaged",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "StudentInfo"
+                    }
+                  },
+                  "Property": "STUDENTS.Ethnicity"
+                }
+              },
+              "queryRef": "StudentInfo.STUDENTS.Ethnicity",
+              "nativeQueryRef": "STUDENTS.Ethnicity"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "Has504"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(StudentInfo.Has504)",
+              "nativeQueryRef": "Sum of Has504"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "IEP"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(StudentInfo.IEP)",
+              "nativeQueryRef": "Sum of IEP"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "StudentInfo"
+                      }
+                    },
+                    "Property": "Has504"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

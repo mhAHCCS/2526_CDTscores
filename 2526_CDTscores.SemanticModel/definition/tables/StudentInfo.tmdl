@@ -1,0 +1,179 @@
+table StudentInfo
+	lineageTag: 8a82dcfa-6ef1-4f19-9e27-9ed0cfafd360
+
+	column 'STUDENTS.Student_Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: fe03f66f-fb2f-4aef-bc22-6c690d7038ad
+		summarizeBy: sum
+		sourceColumn: STUDENTS.Student_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'STUDENTS.State_StudentNumber'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1632220d-2b89-4103-9a59-8fac1f1ca162
+		summarizeBy: none
+		sourceColumn: STUDENTS.State_StudentNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'STUDENTS.LastFirst'
+		dataType: string
+		lineageTag: 3e4fe630-72b0-474e-a5fe-e41b75f0d401
+		summarizeBy: none
+		sourceColumn: STUDENTS.LastFirst
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'STUDENTS.Grade_Level'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1853c6f6-74e3-4c69-aa19-877528ce1a5b
+		summarizeBy: sum
+		sourceColumn: STUDENTS.Grade_Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'STUDENTS.DOB'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 93d1b10a-0b0a-4650-9d0b-2e96ed02229a
+		summarizeBy: none
+		sourceColumn: STUDENTS.DOB
+
+		variation Variation
+			isDefault
+			relationship: 2e191c17-a2c5-43b4-af23-494c9be02894
+			defaultHierarchy: LocalDateTable_4a4b5118-a8a8-41c6-9a4e-295b3cf05c2f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IEP
+		dataType: int64
+		formatString: 0
+		lineageTag: 4bcd74f2-ee98-4f7f-952b-baa6f1e3e0e9
+		summarizeBy: none
+		sourceColumn: IEP
+
+		annotation SummarizationSetBy = User
+
+	column ELLcode
+		dataType: int64
+		formatString: 0
+		lineageTag: f647e9dc-1bb8-49fb-a533-03f33854b798
+		summarizeBy: sum
+		sourceColumn: ELLcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Has504
+		dataType: int64
+		formatString: 0
+		lineageTag: b2fba1b6-fe02-4716-94fc-bb5c3c982c5e
+		summarizeBy: sum
+		sourceColumn: Has504
+
+		annotation SummarizationSetBy = Automatic
+
+	column EconomicallyDisadvantaged
+		dataType: int64
+		formatString: 0
+		lineageTag: a171bd56-0bbd-497c-a2e0-3e5187fdabcd
+		summarizeBy: sum
+		sourceColumn: EconomicallyDisadvantaged
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'STUDENTCOREFIELDS.primarylanguage'
+		dataType: int64
+		formatString: 0
+		lineageTag: 226b5531-8549-4372-84ae-aea0e4c19d82
+		summarizeBy: sum
+		sourceColumn: STUDENTCOREFIELDS.primarylanguage
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'U_STUDENTSUSERFIELDS.guardianschoolemail'
+		dataType: string
+		lineageTag: 3cfd9ad1-7db9-4584-b681-8688e45f9d10
+		summarizeBy: none
+		sourceColumn: U_STUDENTSUSERFIELDS.guardianschoolemail
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'U_STU_CONTACT.c1_email'
+		dataType: string
+		lineageTag: d09c288b-c240-4c7f-a5f8-605ed95241c6
+		summarizeBy: none
+		sourceColumn: U_STU_CONTACT.c1_email
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'U_STUDENTSUSERFIELDS.student_school_email'
+		dataType: string
+		lineageTag: ffe5dedf-df33-4186-9294-9b1f069b37d0
+		summarizeBy: none
+		sourceColumn: U_STUDENTSUSERFIELDS.student_school_email
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'U_STUDENTSUSERFIELDS.mobile_phone'
+		dataType: string
+		lineageTag: a992a180-674d-454c-851b-7d7cf05318e7
+		summarizeBy: none
+		sourceColumn: U_STUDENTSUSERFIELDS.mobile_phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'STUDENTS.Enroll_Status'
+		dataType: int64
+		formatString: 0
+		lineageTag: b46957d7-3e9a-488a-b086-535e833fb4ab
+		summarizeBy: sum
+		sourceColumn: STUDENTS.Enroll_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'STUDENTS.ExitDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 15e4a7ee-fe08-4bbd-a971-dcfe289c9058
+		summarizeBy: none
+		sourceColumn: STUDENTS.ExitDate
+
+		variation Variation
+			isDefault
+			relationship: dd8c34b9-1c39-4d5a-b6df-a65106c2194a
+			defaultHierarchy: LocalDateTable_06331206-b5dd-411c-b5ec-c74a78ffa71d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'STUDENTS.Ethnicity'
+		dataType: int64
+		formatString: 0
+		lineageTag: d617b20f-ead2-4514-8185-e787380dd31f
+		summarizeBy: sum
+		sourceColumn: STUDENTS.Ethnicity
+
+		annotation SummarizationSetBy = Automatic
+
+	partition StudentInfo = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("tcp:acsazsqldbprd01.database.windows.net,1433", "acsdb", [Query="SELECT #(lf)  [STUDENTS.Student_Number],#(lf)  [STUDENTS.State_StudentNumber],#(lf)  [STUDENTS.LastFirst],#(lf)  [STUDENTS.Grade_Level],#(lf)  [STUDENTS.DOB],#(lf)  [S_PA_STU_X.is_sped_student_yn] AS IEP,#(lf)  [S_PA_STU_X.lep_ell_status_code] AS ELLcode,#(lf)  [S_PA_STU_X.is_504_yn] AS Has504,#(lf)  [S_PA_STU_X.economicdisadvantage_tf] AS EconomicallyDisadvantaged,#(lf)  [STUDENTS.Ethnicity],#(lf)  [STUDENTCOREFIELDS.primarylanguage],#(lf)  [U_STUDENTSUSERFIELDS.guardianschoolemail],#(lf)  [U_STU_CONTACT.c1_email],#(lf)  [U_STUDENTSUSERFIELDS.student_school_email],#(lf)  [U_STUDENTSUSERFIELDS.mobile_phone],#(lf)  [STUDENTS.Enroll_Status],#(lf)  [STUDENTS.ExitDate]#(lf)FROM [dbo].[src_powerschool_students]#(lf)WHERE [STUDENTS.ExitDate] > '2025-09-01'#(lf)AND [STUDENTS.State_StudentNumber] > 1000#(lf)"]),
+				    #"Replaced Value" = Table.ReplaceValue(Source,"","0",Replacer.ReplaceValue,{"Has504"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"STUDENTS.DOB", type date}, {"IEP", Int64.Type}, {"ELLcode", Int64.Type}, {"Has504", Int64.Type}, {"EconomicallyDisadvantaged", Int64.Type}, {"STUDENTCOREFIELDS.primarylanguage", Int64.Type}, {"STUDENTS.Enroll_Status", Int64.Type}, {"STUDENTS.ExitDate", type date}, {"STUDENTS.Ethnicity", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

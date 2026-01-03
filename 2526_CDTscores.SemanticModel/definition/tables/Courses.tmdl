@@ -1,0 +1,48 @@
+table Courses
+	lineageTag: 16d47a1e-ec21-4427-aefa-a1126a60bdd4
+
+	column 'STUDENTS.STATE_STUDENTNUMBER'
+		dataType: int64
+		formatString: 0
+		lineageTag: 328b567d-98d2-4f72-b3be-8de3987762b7
+		summarizeBy: none
+		sourceColumn: STUDENTS.STATE_STUDENTNUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'COURSES.COURSE_NAME'
+		dataType: string
+		lineageTag: b8a4cd46-0fb1-40c8-aefc-be077f24e1f5
+		summarizeBy: none
+		sourceColumn: COURSES.COURSE_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'COURSES.CREDITTYPE'
+		dataType: string
+		lineageTag: 6aaeb5d6-79da-4f59-9243-9811b29cba37
+		summarizeBy: none
+		sourceColumn: COURSES.CREDITTYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TEACHERS.LASTFIRST'
+		dataType: string
+		lineageTag: 4724b8e5-c392-43bb-87b7-3b05b4827909
+		summarizeBy: none
+		sourceColumn: TEACHERS.LASTFIRST
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Courses = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("tcp:acsazsqldbprd01.database.windows.net,1433", "acsdb", [Query="SELECT #(lf)  [STUDENTS.STATE_STUDENTNUMBER],#(lf)  [COURSES.COURSE_NAME],#(lf)  [COURSES.CREDITTYPE],#(lf)  [TEACHERS.LASTFIRST]#(lf)FROM [dbo].[src_powerschool_studentcourses]"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

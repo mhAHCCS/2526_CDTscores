@@ -1,0 +1,112 @@
+table ELARangeScores
+	lineageTag: 0d8799ac-c223-4829-8a96-2266eb05bc3a
+
+	column Subject
+		dataType: string
+		lineageTag: d17c224c-605f-4372-a892-e059c5f83394
+		summarizeBy: none
+		sourceColumn: Subject
+
+		annotation SummarizationSetBy = Automatic
+
+	column Course
+		dataType: string
+		lineageTag: a0d67bcb-63aa-4a52-8341-111c14833a0f
+		summarizeBy: none
+		sourceColumn: Course
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Grade Level'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4f9e78e7-5d7d-4ac4-b53f-976a45e808d7
+		summarizeBy: none
+		sourceColumn: Grade Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Red Low'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a58f0d9-b800-480d-bcac-1cea85ab32b1
+		summarizeBy: none
+		sourceColumn: Red Low
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Red High'
+		dataType: int64
+		formatString: 0
+		lineageTag: 37d53dcb-a720-4bf2-9869-c73ee373f962
+		summarizeBy: none
+		sourceColumn: Red High
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Green Low'
+		dataType: int64
+		formatString: 0
+		lineageTag: cf1948bf-2034-4a5e-a916-4cab0ce09b76
+		summarizeBy: none
+		sourceColumn: Green Low
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Green High'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a011be7-e1fb-48c4-acdc-25b6e07bc773
+		summarizeBy: none
+		sourceColumn: Green High
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Blue Low'
+		dataType: int64
+		formatString: 0
+		lineageTag: 497d3c3e-e9a6-48f0-bf8d-0ce938145d97
+		summarizeBy: none
+		sourceColumn: Blue Low
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Blue High'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9105ff1d-2f54-4746-b9ed-8abb7d5f5ee7
+		summarizeBy: none
+		sourceColumn: Blue High
+
+		annotation SummarizationSetBy = Automatic
+
+	column ImpliedColor
+		dataType: string
+		lineageTag: fee9bb8a-cf98-4c2b-a600-5fd9d7a4e9cd
+		summarizeBy: none
+		sourceColumn: ImpliedColor
+
+		annotation SummarizationSetBy = Automatic
+
+	column CKELACourseGrade
+		dataType: string
+		lineageTag: 511de794-512a-4dff-87c0-fe62226ca837
+		summarizeBy: none
+		sourceColumn: CKELACourseGrade
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ELARangeScores = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("tdRNa4QwEAbgvyKeXZoZP5IcS5HtQfbQHsqy7EFQtkJXF7X/f2NGqHaVGhsP5j0YHslMxtPJjZNn13M/6qItystTXF6cl+p6c/a1E+1e39Urrh5kTK3ABFBgFxgEFCHt6LYc3LO3wBQ/JmAfmkbhUwTGpjQxj8tMYFugsAWKa1GFfRXNpwarRn2gKkfVlNLXq242RBEFn+7PNDYoow0NrGpoU+PLsb97INZhb3madbckKVp1QdIsbx5HWXKhV6klrauYGbp5cDDHDPqgS4chRWRKShNy2bGHU2zNhA1MXGsqK6/T9rvOf1XQRwr6BQScQkw3ZaSMivYPBuwwaIXhJspsgYWhcr4D", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Subject = _t, Course = _t, #"Grade Level" = _t, #"Red Low" = _t, #"Red High" = _t, #"Green Low" = _t, #"Green High" = _t, #"Blue Low" = _t, #"Blue High" = _t, ImpliedColor = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Grade Level", Int64.Type}, {"Red Low", Int64.Type}, {"Red High", Int64.Type}, {"Green Low", Int64.Type}, {"Green High", Int64.Type}, {"Blue Low", Int64.Type}, {"Blue High", Int64.Type}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "CKELACourseGrade", each [Course] & Text.From([Grade Level]))
+				in
+				    #"Added Custom"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

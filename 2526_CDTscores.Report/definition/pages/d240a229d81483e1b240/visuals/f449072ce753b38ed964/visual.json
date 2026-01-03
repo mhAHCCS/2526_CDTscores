@@ -1,0 +1,337 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "f449072ce753b38ed964",
+  "position": {
+    "x": 240.81355932203388,
+    "y": 486.50847457627117,
+    "z": 6000,
+    "height": 211.52542372881354,
+    "width": 763.11864406779659,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ScienceRangeScores"
+                    }
+                  },
+                  "Property": "Course"
+                }
+              },
+              "queryRef": "ScienceRangeScores.Course",
+              "nativeQueryRef": "Assessment",
+              "displayName": "Assessment"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ScienceRangeScores"
+                    }
+                  },
+                  "Property": "Grade Level"
+                }
+              },
+              "queryRef": "ScienceRangeScores.Grade Level",
+              "nativeQueryRef": "Grade Level"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ScienceRangeScores"
+                    }
+                  },
+                  "Property": "Red Low"
+                }
+              },
+              "queryRef": "ScienceRangeScores.Red Low",
+              "nativeQueryRef": "Red Low"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ScienceRangeScores"
+                    }
+                  },
+                  "Property": "Red High"
+                }
+              },
+              "queryRef": "ScienceRangeScores.Red High",
+              "nativeQueryRef": "Red High"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ScienceRangeScores"
+                    }
+                  },
+                  "Property": "Green Low"
+                }
+              },
+              "queryRef": "ScienceRangeScores.Green Low",
+              "nativeQueryRef": "Green Low"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ScienceRangeScores"
+                    }
+                  },
+                  "Property": "Green High"
+                }
+              },
+              "queryRef": "ScienceRangeScores.Green High",
+              "nativeQueryRef": "Green High"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ScienceRangeScores"
+                    }
+                  },
+                  "Property": "Blue Low"
+                }
+              },
+              "queryRef": "ScienceRangeScores.Blue Low",
+              "nativeQueryRef": "Blue Low"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ScienceRangeScores"
+                    }
+                  },
+                  "Property": "Blue High"
+                }
+              },
+              "queryRef": "ScienceRangeScores.Blue High",
+              "nativeQueryRef": "Blue High"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ScienceRangeScores"
+                    }
+                  },
+                  "Property": "ImpliedColor"
+                }
+              },
+              "queryRef": "ScienceRangeScores.ImpliedColor",
+              "nativeQueryRef": "ImpliedColor"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "160.17938169766887D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ScienceRangeScores.Course"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ScienceRangeScores.Course"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ScienceRangeScores.Grade Level"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ScienceRangeScores.Red Low"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ScienceRangeScores.Red High"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ScienceRangeScores.Green Low"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ScienceRangeScores.Green High"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ScienceRangeScores.Blue Low"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ScienceRangeScores.Blue High"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ScienceRangeScores.ImpliedColor"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AlternatingRowsNew'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
