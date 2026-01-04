@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop"]
 
-annotation PBI_QueryOrder = ["BatchDownload","MathRangeScores","ELARangeScores","ScienceRangeScores","MeasureTable","MentorsCMs","Counselors","StudentInfo","Courses"]
+annotation PBI_QueryOrder = ["BatchDownload","MathRangeScores","ELARangeScores","ScienceRangeScores","MeasureTable","MentorsCMs","Counselors","StudentInfo","Courses","UnPivot1"]
 
 ref table BatchDownload
 ref table DateTableTemplate_667d3228-513e-474e-84f4-621ce5dd109a
@@ -28,6 +28,7 @@ ref table LocalDateTable_06331206-b5dd-411c-b5ec-c74a78ffa71d
 ref table LocalDateTable_1b9d6f46-057a-45de-a831-934914ebfab1
 ref table 'Top Percentage Filter'
 ref table Courses
+ref table UnPivot1
 
 ref cultureInfo en-US
 

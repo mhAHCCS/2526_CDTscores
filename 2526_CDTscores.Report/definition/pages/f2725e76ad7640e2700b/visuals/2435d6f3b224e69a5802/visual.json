@@ -7,7 +7,7 @@
     "z": 12000,
     "height": 216.72727272727272,
     "width": 273.45454545454544,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -447,5 +447,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f556eea41582ca970eeb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BatchDownload"
+              }
+            },
+            "Property": "TotalScaleScoreColor"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5872e6d7441eea30b91d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BatchDownload"
+                  }
+                },
+                "Property": "TotalScaleScoreColor"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

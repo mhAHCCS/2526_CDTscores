@@ -1,0 +1,690 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "249b8bc7ea159b52d496",
+  "position": {
+    "x": 0,
+    "y": 200.09546539379477,
+    "z": 2000,
+    "height": 519.33174224343679,
+    "width": 540.71599045346068,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "StudentInfo"
+                    }
+                  },
+                  "Property": "STUDENTS.LastFirst"
+                }
+              },
+              "queryRef": "StudentInfo.STUDENTS.LastFirst",
+              "nativeQueryRef": "Student",
+              "displayName": "Student"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "StudentInfo"
+                    }
+                  },
+                  "Property": "STUDENTS.Grade_Level"
+                }
+              },
+              "queryRef": "Sum(StudentInfo.STUDENTS.Grade_Level)",
+              "nativeQueryRef": "Grade",
+              "displayName": "Grade"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BatchDownload"
+                    }
+                  },
+                  "Property": "AssessmentCategory"
+                }
+              },
+              "queryRef": "BatchDownload.AssessmentCategory",
+              "nativeQueryRef": "AssessmentCategory"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BatchDownload"
+                    }
+                  },
+                  "Property": "Total Scale Score for Test"
+                }
+              },
+              "queryRef": "Sum(BatchDownload.Total Scale Score for Test)",
+              "nativeQueryRef": "Total Scale Score",
+              "displayName": "Total Scale Score"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BatchDownload"
+                    }
+                  },
+                  "Property": "AHCCSsession"
+                }
+              },
+              "queryRef": "BatchDownload.AHCCSsession",
+              "nativeQueryRef": "TestNum",
+              "displayName": "TestNum"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BatchDownload"
+                    }
+                  },
+                  "Property": "Teacher"
+                }
+              },
+              "queryRef": "BatchDownload.Teacher",
+              "nativeQueryRef": "Teacher"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BatchDownload"
+                    }
+                  },
+                  "Property": "Assessment Name"
+                }
+              },
+              "queryRef": "BatchDownload.Assessment Name",
+              "nativeQueryRef": "Assessment Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BatchDownload"
+                    }
+                  },
+                  "Property": "FinishedSameDay"
+                }
+              },
+              "queryRef": "BatchDownload.FinishedSameDay",
+              "nativeQueryRef": "FinishedSameDay"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BatchDownload"
+                    }
+                  },
+                  "Property": "TestDurationMinutes"
+                }
+              },
+              "queryRef": "Sum(BatchDownload.TestDurationMinutes)",
+              "nativeQueryRef": "Minutes Tested",
+              "displayName": "Minutes Tested"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BatchDownload"
+                    }
+                  },
+                  "Property": "Ending Tested Date"
+                }
+              },
+              "queryRef": "BatchDownload.Ending Tested Date",
+              "nativeQueryRef": "End Date",
+              "displayName": "End Date"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "StudentInfo"
+                  }
+                },
+                "Property": "STUDENTS.LastFirst"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BatchDownload"
+                  }
+                },
+                "Property": "AssessmentCategory"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BatchDownload"
+                  }
+                },
+                "Property": "AHCCSsession"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "BatchDownload"
+                                        }
+                                      },
+                                      "Property": "TotalScaleScoreColor"
+                                    }
+                                  },
+                                  "Function": 3
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'Blue'"
+                                }
+                              }
+                            },
+                            "Annotations": {
+                              "PowerBI.SQExprEvaluationKind": 1,
+                              "PowerBI.SQExprTextOperatorOption": 2
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#4F5BE2'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "BatchDownload"
+                                        }
+                                      },
+                                      "Property": "TotalScaleScoreColor"
+                                    }
+                                  },
+                                  "Function": 3
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'Green'"
+                                }
+                              }
+                            },
+                            "Annotations": {
+                              "PowerBI.SQExprEvaluationKind": 1,
+                              "PowerBI.SQExprTextOperatorOption": 2
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#0F9726'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "BatchDownload"
+                                        }
+                                      },
+                                      "Property": "TotalScaleScoreColor"
+                                    }
+                                  },
+                                  "Function": 3
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'Red'"
+                                }
+                              }
+                            },
+                            "Annotations": {
+                              "PowerBI.SQExprEvaluationKind": 1,
+                              "PowerBI.SQExprTextOperatorOption": 2
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#FF0000'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Sum(BatchDownload.Total Scale Score for Test)"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "StudentInfo.STUDENTS.LastFirst"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BatchDownload.Assessment Name"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(BatchDownload.Total Scale Score for Test)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BatchDownload.Teacher"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(BatchDownload.TestDurationMinutes)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BatchDownload.FinishedSameDay"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(StudentInfo.STUDENTS.Grade_Level)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BatchDownload.Ending Tested Date"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BatchDownload.AHCCSsession"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BatchDownload.AssessmentCategory"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AlternatingRowsNew'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e4644efaed8c134b1c42",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "StudentInfo"
+              }
+            },
+            "Property": "STUDENTS.LastFirst"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "18a6449186b3b85444a6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "StudentInfo"
+              }
+            },
+            "Property": "STUDENTS.Grade_Level"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "30e27210897a0250954d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BatchDownload"
+              }
+            },
+            "Property": "Assessment Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e09082e09286156e6d62",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BatchDownload"
+              }
+            },
+            "Property": "Total Scale Score for Test"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "df2c7f30ac11057b361b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BatchDownload"
+              }
+            },
+            "Property": "Teacher"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e7f4451371330695000b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BatchDownload"
+              }
+            },
+            "Property": "FinishedSameDay"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4b0e092d04b2ab7ccd11",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BatchDownload"
+              }
+            },
+            "Property": "TestDurationMinutes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "380b8d494c3556d50d79",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BatchDownload"
+              }
+            },
+            "Property": "Ending Tested Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "670a909346081706974d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BatchDownload"
+              }
+            },
+            "Property": "AHCCSsession"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "13abe46c9cd92900252a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BatchDownload"
+              }
+            },
+            "Property": "AssessmentCategory"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

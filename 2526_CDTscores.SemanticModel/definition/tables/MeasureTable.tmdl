@@ -93,6 +93,29 @@ table MeasureTable
 		formatString: 0
 		lineageTag: f2e7d7a0-936f-474a-bcd3-20bcd0b7ccf3
 
+	measure 'Tooltip Session 1 vs 2' = ```
+			
+			VAR ColorSel =
+			    SELECTEDVALUE ( BatchDownload[TotalScaleScoreColor] )
+			VAR C1 =
+			    CALCULATE (
+			        COUNTROWS ( BatchDownload ),
+			        BatchDownload[TotalScaleScoreColor] = ColorSel,
+			        BatchDownload[AHCCSsession] = "1"
+			    )
+			VAR C2 =
+			    CALCULATE (
+			        COUNTROWS ( BatchDownload ),
+			        BatchDownload[TotalScaleScoreColor] = ColorSel,
+			        BatchDownload[AHCCSsession] = "2"
+			    )
+			RETURN
+			    "Session 1: " & FORMAT ( C1, "#,0" ) &
+			    " | Session 2: " & FORMAT ( C2, "#,0" )
+			
+			```
+		lineageTag: 5a04c2d3-4b6f-44f3-8eb6-29ae07d74814
+
 	partition MeasureTable = m
 		mode: import
 		source =

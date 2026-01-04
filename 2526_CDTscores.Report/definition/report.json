@@ -171,6 +171,16 @@
           "name": "chart6325726300556088.jpg",
           "path": "chart6325726300556088.jpg",
           "type": "Image"
+        },
+        {
+          "name": "girl9480441654843385.png",
+          "path": "girl9480441654843385.png",
+          "type": "Image"
+        },
+        {
+          "name": "testStack13496459608225075.png",
+          "path": "testStack13496459608225075.png",
+          "type": "Image"
         }
       ]
     }
@@ -181,6 +191,7 @@
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
+    "filterPaneHiddenInEditMode": true,
     "useDefaultAggregateDisplayName": true
   }
 }

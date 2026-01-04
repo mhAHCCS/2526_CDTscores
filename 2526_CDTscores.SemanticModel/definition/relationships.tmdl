@@ -64,3 +64,8 @@ relationship AutoDetected_46ab37c0-9d41-4488-a2f9-bd58b88bbaa5
 	fromColumn: Courses.'STUDENTS.STATE_STUDENTNUMBER'
 	toColumn: StudentInfo.'STUDENTS.State_StudentNumber'
 
+relationship ce05ab77-c52f-be2e-a32b-7e78ec078699
+	crossFilteringBehavior: bothDirections
+	fromColumn: UnPivot1.PAsecureID
+	toColumn: StudentInfo.'STUDENTS.State_StudentNumber'
+

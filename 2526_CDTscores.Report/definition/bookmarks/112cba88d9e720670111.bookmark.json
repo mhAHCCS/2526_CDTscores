@@ -72,7 +72,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0b8f565294f0039d5169",
+                  "name": "b99d1ed001b5e0e00338",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -97,7 +97,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b79713e0570930736a80",
+                  "name": "4482e23986509a2d6900",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -112,7 +112,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "708710382e1e1830df9f",
+                  "name": "be99c3b4cb0d0a3e2330",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -161,6 +161,126 @@
                         }
                       },
                       "Property": "TotalScaleScoreColor"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "291b61affb29ff678e7f": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "15322bb011549e1c6d02",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Courses",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "c"
+                                        }
+                                      },
+                                      "Property": "TEACHERS.LASTFIRST"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Alderfer, Angela'"
+                                      }
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Facilitator, Staff'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Courses"
+                        }
+                      },
+                      "Property": "TEACHERS.LASTFIRST"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "8964a1819dd7a3d852b8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Courses"
+                        }
+                      },
+                      "Property": "COURSES.COURSE_NAME"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Courses"
+                        }
+                      },
+                      "Property": "COURSES.COURSE_NAME"
                     }
                   }
                 ]
@@ -220,7 +340,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "039ea591838811c131bc",
+                  "name": "8548a0598bd384d3103d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -275,7 +395,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9f7ce41f6b03e6d1c65d",
+                  "name": "af6a21cf94b1ab337003",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -330,7 +450,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "c9ef3de76dcc5a460eae",
+                  "name": "3117b716c85ba9650b60",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -391,7 +511,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "1329ae71c60cb635cc64",
+                  "name": "79c9e70f6308162acdd7",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -422,7 +542,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b10b3d44539d087e9930",
+                  "name": "03b7a333ee77005e2592",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -477,7 +597,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "78ea4940be7c51a9a5ca",
+                  "name": "497a9e65022113d01e89",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -492,7 +612,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "25fdfb5cea7ed4531faa",
+                  "name": "b8898789e2b49952a679",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -507,7 +627,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "636ec2574f91b791c419",
+                  "name": "46b9a2d74d0cc10c7690",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -522,7 +642,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "611b2ef2bc2010973275",
+                  "name": "b1952907e5500601e0c3",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -537,7 +657,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d6d2e1b8a6f687a3b927",
+                  "name": "577ad497077e6607987b",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -552,7 +672,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1c76f7b70f755a5b97b8",
+                  "name": "6fb3a0953b0e8ac1023a",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -567,7 +687,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9ea823ab4d670de5a6a2",
+                  "name": "cb55427ee9888066d95e",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -582,7 +702,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "91d843ee7b4077464694",
+                  "name": "e822fd2464b14012a70c",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -597,7 +717,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8cc6b12934a96b1c0acd",
+                  "name": "ab493c15007b2de98533",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -612,7 +732,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "80c143546ab52231c369",
+                  "name": "4d15a662e0210663dd36",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -627,7 +747,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "dd97b457edd79c4aebab",
+                  "name": "e2c89067aa341e399edc",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -642,7 +762,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "524ed809f08969d3a25f",
+                  "name": "71a97924c3eb09020b61",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -657,7 +777,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "717e607f8f3b41e207f0",
+                  "name": "496f1ade0c5884c740c7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -672,7 +792,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6ff084b346f0e75b76ba",
+                  "name": "6ee8bb4bc3d0ae741262",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -687,7 +807,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f8f120a6316fc8056566",
+                  "name": "751dcfb1d1aca18209b8",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -702,7 +822,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1ce8704e9a7d1ffa6251",
+                  "name": "67b0191feac99cc0160e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -755,7 +875,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "3425eb161a52a09e29f9",
+                  "name": "00ece51f789242e94100",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -903,7 +1023,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "042ac1544043480e9ea4",
+                  "name": "27318209d3451ca46b69",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -928,7 +1048,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "66fa8744ee71fdb45cd7",
+                  "name": "8eeabcafb7cc0c062d86",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -948,7 +1068,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a44b6149ecebc20ccbbb",
+                  "name": "7d4e0726c22008c04004",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -968,7 +1088,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8ecb659b5dd5c1c1276d",
+                  "name": "faed1f1058cc3669ab99",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1018,7 +1138,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "31560ffad0f9a2c78a12",
+                  "name": "07f7cec081240da425a5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1063,159 +1183,6 @@
                         }
                       },
                       "Property": "Content Area"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "fada448743565044d058": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "cf5ddf046bd7da61007f",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "Test Session Name"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "Test Session Name"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "e93b86f7f30fcb472e73": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "a82b4a4002239c588d5e",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "b",
-                        "Entity": "BatchDownload",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "b"
-                                        }
-                                      },
-                                      "Property": "AHCCSsession"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Y'"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "AHCCSsession"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "AHCCSsession"
                     }
                   }
                 ]
@@ -1327,18 +1294,18 @@
               }
             }
           },
-          "291b61affb29ff678e7f": {
+          "e93b86f7f30fcb472e73": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "15322bb011549e1c6d02",
+                  "name": "a82b4a4002239c588d5e",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
                     "From": [
                       {
-                        "Name": "c",
-                        "Entity": "Courses",
+                        "Name": "b",
+                        "Entity": "BatchDownload",
                         "Type": 0
                       }
                     ],
@@ -1353,10 +1320,10 @@
                                     "Column": {
                                       "Expression": {
                                         "SourceRef": {
-                                          "Source": "c"
+                                          "Source": "b"
                                         }
                                       },
-                                      "Property": "TEACHERS.LASTFIRST"
+                                      "Property": "AHCCSsession"
                                     }
                                   }
                                 ],
@@ -1364,14 +1331,7 @@
                                   [
                                     {
                                       "Literal": {
-                                        "Value": "'Alderfer, Angela'"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Facilitator, Staff'"
+                                        "Value": "'Y'"
                                       }
                                     }
                                   ]
@@ -1387,25 +1347,112 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Courses"
+                          "Entity": "BatchDownload"
                         }
                       },
-                      "Property": "TEACHERS.LASTFIRST"
+                      "Property": "AHCCSsession"
                     }
                   },
-                  "howCreated": 1
-                },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "b",
+                                "Entity": "BatchDownload",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "b"
+                                            }
+                                          },
+                                          "Property": "AHCCSsession"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'2'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "AHCCSsession"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "fada448743565044d058": {
+            "filters": {
+              "byExpr": [
                 {
-                  "name": "5b907707a9ae5d048dcf",
+                  "name": "c04cc56aa4d3b2390707",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Courses"
+                          "Entity": "BatchDownload"
                         }
                       },
-                      "Property": "COURSES.COURSE_NAME"
+                      "Property": "Test Session Name"
                     }
                   },
                   "howCreated": 0
@@ -1437,10 +1484,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Courses"
+                          "Entity": "BatchDownload"
                         }
                       },
-                      "Property": "COURSES.COURSE_NAME"
+                      "Property": "Test Session Name"
                     }
                   }
                 ]
