@@ -11453,7 +11453,7 @@ cultureInfo en-US
 			    "un_pivot_1": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1"
+			          "ConceptualEntity": "UnPivotedScores"
 			        }
 			      },
 			      "State": "Generated",
@@ -11475,7 +11475,7 @@ cultureInfo en-US
 			    "un_pivot_1.content_area": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "Content Area"
 			        }
 			      },
@@ -11597,7 +11597,7 @@ cultureInfo en-US
 			    "un_pivot_1.grade": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "Grade"
 			        }
 			      },
@@ -11713,7 +11713,7 @@ cultureInfo en-US
 			    "un_pivot_1.assessment_name": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "Assessment Name"
 			        }
 			      },
@@ -11769,7 +11769,7 @@ cultureInfo en-US
 			    "un_pivot_1.DRC_INSIGHT_test_name": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "DRC INSIGHT Test Name"
 			        }
 			      },
@@ -11915,7 +11915,7 @@ cultureInfo en-US
 			    "un_pivot_1.assessment_number": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "Assessment Number"
 			        }
 			      },
@@ -11941,7 +11941,7 @@ cultureInfo en-US
 			    "un_pivot_1.P_asecure_ID": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "PAsecureID"
 			        }
 			      },
@@ -12007,7 +12007,7 @@ cultureInfo en-US
 			    "un_pivot_1.test_session_name": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "Test Session Name"
 			        }
 			      },
@@ -12141,7 +12141,7 @@ cultureInfo en-US
 			    "un_pivot_1.AHCC_ssession": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "AHCCSsession"
 			        }
 			      },
@@ -12174,7 +12174,7 @@ cultureInfo en-US
 			    "un_pivot_1.teacher": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "Teacher"
 			        }
 			      },
@@ -12290,7 +12290,7 @@ cultureInfo en-US
 			    "un_pivot_1.CK_batch_assmtname_grade": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "CKBatchAssmtnameGrade"
 			        }
 			      },
@@ -12413,7 +12413,7 @@ cultureInfo en-US
 			    "un_pivot_1.measure_type": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "Measure Type"
 			        }
 			      },
@@ -12535,7 +12535,7 @@ cultureInfo en-US
 			    "un_pivot_1.score_category": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "Score Category"
 			        }
 			      },
@@ -12657,7 +12657,7 @@ cultureInfo en-US
 			    "un_pivot_1.value": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "UnPivot1",
+			          "ConceptualEntity": "UnPivotedScores",
 			          "ConceptualProperty": "Value"
 			        }
 			      },
@@ -13460,7 +13460,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_student_info": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -13901,7 +13901,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_value": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -13934,7 +13934,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_score_category": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -13967,7 +13967,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_measure_type": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -14000,7 +14000,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_CK_batch_assmtname_grade": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -14033,7 +14033,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_teacher": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -14099,7 +14099,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_AHCC_ssession": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -14132,7 +14132,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_test_session_name": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -14165,7 +14165,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_assessment_number": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -14198,7 +14198,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_DRC_INSIGHT_test_name": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -14231,7 +14231,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_assessment_name": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -14264,7 +14264,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_grade": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -14297,7 +14297,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_has_content_area": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -18475,7 +18475,7 @@ cultureInfo en-US
 			    },
 			    "un_pivot_1_in_content_area": {
 			      "Binding": {
-			        "ConceptualEntity": "UnPivot1"
+			        "ConceptualEntity": "UnPivotedScores"
 			      },
 			      "State": "Generated",
 			      "Roles": {

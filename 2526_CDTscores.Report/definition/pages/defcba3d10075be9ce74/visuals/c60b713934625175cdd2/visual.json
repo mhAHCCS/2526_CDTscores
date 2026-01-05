@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "UnPivot1"
+                      "Entity": "UnPivotedScores"
                     }
                   },
                   "Property": "Score Category"
@@ -39,7 +39,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "UnPivot1"
+                      "Entity": "UnPivotedScores"
                     }
                   },
                   "Property": "AHCCSsession"
@@ -48,6 +48,24 @@
               "queryRef": "UnPivot1.AHCCSsession",
               "nativeQueryRef": "Test #",
               "displayName": "Test #"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MeasureTable"
+                    }
+                  },
+                  "Property": "Test1to2 Percent Change"
+                }
+              },
+              "queryRef": "MeasureTable.Test1to2 Percent Change",
+              "nativeQueryRef": "Test1to2 Percent Change"
             }
           ]
         },
@@ -60,7 +78,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "UnPivot1"
+                          "Entity": "UnPivotedScores"
                         }
                       },
                       "Property": "Value"
@@ -82,7 +100,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "UnPivot1"
+                    "Entity": "UnPivotedScores"
                   }
                 },
                 "Property": "Score Category"
@@ -248,7 +266,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "UnPivot1"
+                            "Entity": "UnPivotedScores"
                           }
                         },
                         "Property": "AHCCSsession"
@@ -289,7 +307,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "UnPivot1"
+                            "Entity": "UnPivotedScores"
                           }
                         },
                         "Property": "AHCCSsession"
@@ -400,7 +418,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "UnPivot1"
+                "Entity": "UnPivotedScores"
               }
             },
             "Property": "Content Area"
@@ -412,7 +430,7 @@
           "From": [
             {
               "Name": "u",
-              "Entity": "UnPivot1",
+              "Entity": "UnPivotedScores",
               "Type": 0
             }
           ],
@@ -454,7 +472,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "UnPivot1"
+                "Entity": "UnPivotedScores"
               }
             },
             "Property": "AHCCSsession"
@@ -466,7 +484,7 @@
           "From": [
             {
               "Name": "u",
-              "Entity": "UnPivot1",
+              "Entity": "UnPivotedScores",
               "Type": 0
             }
           ],
@@ -526,7 +544,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "UnPivot1"
+                "Entity": "UnPivotedScores"
               }
             },
             "Property": "Score Category"
@@ -542,7 +560,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "UnPivot1"
+                    "Entity": "UnPivotedScores"
                   }
                 },
                 "Property": "Value"

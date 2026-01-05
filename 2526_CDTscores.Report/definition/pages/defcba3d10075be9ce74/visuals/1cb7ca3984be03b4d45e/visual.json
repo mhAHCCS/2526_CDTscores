@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "1cb7ca3984be03b4d45e",
   "position": {
-    "x": 982.880829015544,
-    "y": 31.834196891191709,
+    "x": 1006.7069539989611,
+    "y": 38.400162162846968,
     "z": 18000,
-    "height": 152.53886010362694,
-    "width": 191.00518134715026,
+    "height": 144.26006866583052,
+    "width": 159.82770197509279,
     "tabOrder": 22002
   },
   "visual": {
@@ -108,6 +108,27 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "backgroundShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "backgroundTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
         }
       ],
       "cardImage": [
@@ -180,7 +201,7 @@
             "imageAreaSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20L"
+                  "Value": "27L"
                 }
               }
             }
@@ -228,7 +249,7 @@
             "imageAreaSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20L"
+                  "Value": "27L"
                 }
               }
             }
@@ -364,10 +385,66 @@
             "id": "default"
           }
         }
+      ],
+      "fillCustom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
       "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
         {
           "properties": {
             "show": {

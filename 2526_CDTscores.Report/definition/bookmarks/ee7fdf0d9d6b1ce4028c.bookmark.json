@@ -68,230 +68,6 @@
     "sections": {
       "defcba3d10075be9ce74": {
         "visualContainers": {
-          "e25466daa1200c887ed0": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "15322bb011549e1c6d02",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "c",
-                        "Entity": "Courses",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "c"
-                                        }
-                                      },
-                                      "Property": "TEACHERS.LASTFIRST"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Alderfer, Angela'"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Facilitator, Staff'"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Courses"
-                        }
-                      },
-                      "Property": "TEACHERS.LASTFIRST"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "8baa976953d8b589d00e",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Courses"
-                        }
-                      },
-                      "Property": "COURSES.COURSE_NAME"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Courses"
-                        }
-                      },
-                      "Property": "COURSES.COURSE_NAME"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "75da2a5b409b8d4aa534": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "e5d6b6eda1ed7e3adda8",
-                  "type": "Advanced",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "m",
-                        "Entity": "MeasureTable",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Comparison": {
-                            "ComparisonKind": 0,
-                            "Left": {
-                              "Measure": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "m"
-                                  }
-                                },
-                                "Property": "NameHasData"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "1L"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MeasureTable"
-                        }
-                      },
-                      "Property": "NameHasData"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "0ed976db48a9a9009cee",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "StudentInfo"
-                        }
-                      },
-                      "Property": "STUDENTS.LastFirst"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "StudentInfo"
-                        }
-                      },
-                      "Property": "STUDENTS.LastFirst"
-                    }
-                  }
-                ]
-              }
-            }
-          },
           "0f4e6eddad20a10e0b41": {
             "filters": {
               "byExpr": [
@@ -347,20 +123,45 @@
               }
             }
           },
-          "db37b181d41d44394ad0": {
+          "1cb7ca3984be03b4d45e": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "a5a97b0638a2a45713b4",
-                  "type": "Categorical",
+                  "name": "eed6408e6b58285c9257",
+                  "type": "Advanced",
                   "expression": {
-                    "Column": {
+                    "Aggregation": {
                       "Expression": {
-                        "SourceRef": {
-                          "Entity": "Counselors"
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "BatchDownload"
+                            }
+                          },
+                          "Property": "PAsecureID"
                         }
                       },
-                      "Property": "Counselor"
+                      "Function": 2
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "054cb6a782b507e9c9bd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "BatchDownload"
+                            }
+                          },
+                          "Property": "Test Session Name"
+                        }
+                      },
+                      "Function": 5
                     }
                   },
                   "howCreated": 0
@@ -368,66 +169,44 @@
               ]
             },
             "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
                       "Expression": {
-                        "SourceRef": {
-                          "Entity": "Counselors"
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "BatchDownload"
+                            }
+                          },
+                          "Property": "PAsecureID"
                         }
                       },
-                      "Property": "Counselor"
+                      "Function": 2
                     }
                   }
-                ]
-              }
+                }
+              ]
             }
           },
-          "340ca3912a7e27c7a28e": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "c14dbefac0080b74828a": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "f74f8cdbc2405981038b": {
+          "1db59aacab5c4d6d0dbd": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "311bf413121ceed22647",
+                  "name": "31e99416d8b670c30c31",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "BatchDownload"
+                          "Entity": "MentorsCMs"
                         }
                       },
-                      "Property": "Assessment Name"
+                      "Property": "Mentor"
                     }
                   },
                   "howCreated": 0
@@ -459,10 +238,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "BatchDownload"
+                          "Entity": "MentorsCMs"
                         }
                       },
-                      "Property": "Assessment Name"
+                      "Property": "Mentor"
                     }
                   }
                 ]
@@ -670,570 +449,6 @@
               ]
             }
           },
-          "1db59aacab5c4d6d0dbd": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "3973ae876bd695285002",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MentorsCMs"
-                        }
-                      },
-                      "Property": "Mentor"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MentorsCMs"
-                        }
-                      },
-                      "Property": "Mentor"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "e935b60e2575029d55ac": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "7ef405c2897e3426082a",
-                  "type": "Advanced",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "m",
-                        "Entity": "MentorsCMs",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "Comparison": {
-                                "ComparisonKind": 0,
-                                "Left": {
-                                  "Column": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Source": "m"
-                                      }
-                                    },
-                                    "Property": "Case Manager"
-                                  }
-                                },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "null"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MentorsCMs"
-                        }
-                      },
-                      "Property": "Case Manager"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MentorsCMs"
-                        }
-                      },
-                      "Property": "Case Manager"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "ee6115695a64db156de1": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "f44a9b9cb35570301b30",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "Content Area"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "Content Area"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "d2b1be9cb145de800c02": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "15322bb011549e1c6d02",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "c",
-                        "Entity": "Courses",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "c"
-                                        }
-                                      },
-                                      "Property": "TEACHERS.LASTFIRST"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Alderfer, Angela'"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Facilitator, Staff'"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Courses"
-                        }
-                      },
-                      "Property": "TEACHERS.LASTFIRST"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Courses"
-                        }
-                      },
-                      "Property": "TEACHERS.LASTFIRST"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "8e79ef70ebbb2d571733": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "53c89ba4162a00e39d51",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "Test Session Name"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "Test Session Name"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "7fd513fde6935042d934": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "21aada01714c0e85e650",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Score Category"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "649949c21c708c179c00",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "UnPivot1"
-                            }
-                          },
-                          "Property": "Value"
-                        }
-                      },
-                      "Function": 1
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "314075c6a987a9491205",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "u",
-                        "Entity": "UnPivot1",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "u"
-                                    }
-                                  },
-                                  "Property": "Content Area"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'Literature'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Content Area"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "e323cf72729a9b244d83",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "AHCCSsession"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "be3bc8de31007d050a14",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "u",
-                        "Entity": "UnPivot1",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "u"
-                                        }
-                                      },
-                                      "Property": "AHCCSsession"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Y'"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "AHCCSsession"
-                    }
-                  },
-                  "howCreated": 1
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "clusteredColumnChart",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Score Category"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Score Category"
-                    }
-                  }
-                ]
-              }
-            }
-          },
           "2d987f67434b88cc22ba": {
             "filters": {
               "byExpr": [
@@ -1341,6 +556,1404 @@
                         }
                       },
                       "Property": "IEP"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "340ca3912a7e27c7a28e": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "4aa26e6d64a369e54a90": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "314075c6a987a9491205",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UnPivotedScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "u"
+                                    }
+                                  },
+                                  "Property": "Content Area"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Mathematics'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Content Area"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "be3bc8de31007d050a14",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UnPivotedScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "u"
+                                        }
+                                      },
+                                      "Property": "AHCCSsession"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Y'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "AHCCSsession"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "004f637e95822a030000",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "BatchDownload"
+                            }
+                          },
+                          "Property": "TotalScaleScoreColor"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0d842fd11aa8b7d011b0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TotalScaleScoreColor"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ffe449128eb250000d0c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "Tooltip Session 1 vs 2"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TotalScaleScoreColor"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TotalScaleScoreColor"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "56cc03eeae3a3cadd306": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "6dfdb3e6ec18338738cb": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "314075c6a987a9491205",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UnPivotedScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "u"
+                                    }
+                                  },
+                                  "Property": "Content Area"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Mathematics'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Content Area"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "be3bc8de31007d050a14",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UnPivotedScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "u"
+                                        }
+                                      },
+                                      "Property": "AHCCSsession"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Y'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "AHCCSsession"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d0416145405507395623",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Score Category"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3fa4411416c7b2b44c6c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "UnPivotedScores"
+                            }
+                          },
+                          "Property": "Value"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "02ffc77e9e674d076020",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "Test1to2 Percent Change"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Score Category"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Score Category"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "75da2a5b409b8d4aa534": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e5d6b6eda1ed7e3adda8",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "MeasureTable",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "m"
+                                  }
+                                },
+                                "Property": "NameHasData"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "1L"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "NameHasData"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "0ed976db48a9a9009cee",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.LastFirst"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StudentInfo"
+                        }
+                      },
+                      "Property": "STUDENTS.LastFirst"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "7f8256a481d917670ce3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "314075c6a987a9491205",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UnPivotedScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "u"
+                                    }
+                                  },
+                                  "Property": "Content Area"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Literature'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Content Area"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "be3bc8de31007d050a14",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UnPivotedScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "u"
+                                        }
+                                      },
+                                      "Property": "AHCCSsession"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Y'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "AHCCSsession"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "e1d6f630655de0371ca5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "BatchDownload"
+                            }
+                          },
+                          "Property": "TotalScaleScoreColor"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "37ad863619d36ba80c91",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TotalScaleScoreColor"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "26c0a5612e0cb9c78d50",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "Tooltip Session 1 vs 2"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TotalScaleScoreColor"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TotalScaleScoreColor"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "7fd513fde6935042d934": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "21aada01714c0e85e650",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Score Category"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "649949c21c708c179c00",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "UnPivotedScores"
+                            }
+                          },
+                          "Property": "Value"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "314075c6a987a9491205",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UnPivotedScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "u"
+                                    }
+                                  },
+                                  "Property": "Content Area"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Literature'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Content Area"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "e323cf72729a9b244d83",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "AHCCSsession"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "be3bc8de31007d050a14",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UnPivotedScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "u"
+                                        }
+                                      },
+                                      "Property": "AHCCSsession"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Y'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "AHCCSsession"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "fe375bc391bb7a97e290",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "Test1to2 Percent Change"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Score Category"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Score Category"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "85e1b179a5b2cba07201": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "314075c6a987a9491205",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UnPivotedScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "u"
+                                    }
+                                  },
+                                  "Property": "Content Area"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Science'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Content Area"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "be3bc8de31007d050a14",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UnPivotedScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "u"
+                                        }
+                                      },
+                                      "Property": "AHCCSsession"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Y'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "AHCCSsession"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "6a64a284a68066d89dce",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "BatchDownload"
+                            }
+                          },
+                          "Property": "TotalScaleScoreColor"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "35b80ce4a201404e2a5b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TotalScaleScoreColor"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "bf474aba7ac7cb096980",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "Tooltip Session 1 vs 2"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TotalScaleScoreColor"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "TotalScaleScoreColor"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "8e79ef70ebbb2d571733": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "af6b95c152ab0d731c5b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Test Session Name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Test Session Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "c14dbefac0080b74828a": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "c60b713934625175cdd2": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "314075c6a987a9491205",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UnPivotedScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "u"
+                                    }
+                                  },
+                                  "Property": "Content Area"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Science'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Content Area"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "be3bc8de31007d050a14",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UnPivotedScores",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "u"
+                                        }
+                                      },
+                                      "Property": "AHCCSsession"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Y'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "AHCCSsession"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7088e5f571993151cb60",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Score Category"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e910bcd068c01760da5b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "UnPivotedScores"
+                            }
+                          },
+                          "Property": "Value"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "59f40f9f10e39d0594de",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MeasureTable"
+                        }
+                      },
+                      "Property": "Test1to2 Percent Change"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Score Category"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UnPivotedScores"
+                        }
+                      },
+                      "Property": "Score Category"
                     }
                   }
                 ]
@@ -1460,6 +2073,434 @@
               }
             }
           },
+          "d2b1be9cb145de800c02": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "15322bb011549e1c6d02",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Courses",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "c"
+                                        }
+                                      },
+                                      "Property": "TEACHERS.LASTFIRST"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Alderfer, Angela'"
+                                      }
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Facilitator, Staff'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Courses"
+                        }
+                      },
+                      "Property": "TEACHERS.LASTFIRST"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Courses"
+                        }
+                      },
+                      "Property": "TEACHERS.LASTFIRST"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "db37b181d41d44394ad0": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a5a97b0638a2a45713b4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Counselors"
+                        }
+                      },
+                      "Property": "Counselor"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Counselors"
+                        }
+                      },
+                      "Property": "Counselor"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "e25466daa1200c887ed0": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "15322bb011549e1c6d02",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Courses",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "c"
+                                        }
+                                      },
+                                      "Property": "TEACHERS.LASTFIRST"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Alderfer, Angela'"
+                                      }
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Facilitator, Staff'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Courses"
+                        }
+                      },
+                      "Property": "TEACHERS.LASTFIRST"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "2e74537583eea7ce980a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Courses"
+                        }
+                      },
+                      "Property": "COURSES.COURSE_NAME"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Courses"
+                        }
+                      },
+                      "Property": "COURSES.COURSE_NAME"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "e935b60e2575029d55ac": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7ef405c2897e3426082a",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "MentorsCMs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "m"
+                                      }
+                                    },
+                                    "Property": "Case Manager"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MentorsCMs"
+                        }
+                      },
+                      "Property": "Case Manager"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MentorsCMs"
+                        }
+                      },
+                      "Property": "Case Manager"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "ee6115695a64db156de1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d3624cf5b034b7a6acb0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Content Area"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BatchDownload"
+                        }
+                      },
+                      "Property": "Content Area"
+                    }
+                  }
+                ]
+              }
+            }
+          },
           "f469a58a3ea07ad06b32": {
             "filters": {
               "byExpr": [
@@ -1573,585 +2614,11 @@
               }
             }
           },
-          "6dfdb3e6ec18338738cb": {
+          "f74f8cdbc2405981038b": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "314075c6a987a9491205",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "u",
-                        "Entity": "UnPivot1",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "u"
-                                    }
-                                  },
-                                  "Property": "Content Area"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'Mathematics'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Content Area"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "be3bc8de31007d050a14",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "u",
-                        "Entity": "UnPivot1",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "u"
-                                        }
-                                      },
-                                      "Property": "AHCCSsession"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Y'"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "AHCCSsession"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "d0416145405507395623",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Score Category"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "3fa4411416c7b2b44c6c",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "UnPivot1"
-                            }
-                          },
-                          "Property": "Value"
-                        }
-                      },
-                      "Function": 1
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "clusteredColumnChart",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Score Category"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Score Category"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "1cb7ca3984be03b4d45e": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "eed6408e6b58285c9257",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "BatchDownload"
-                            }
-                          },
-                          "Property": "PAsecureID"
-                        }
-                      },
-                      "Function": 2
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "054cb6a782b507e9c9bd",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "BatchDownload"
-                            }
-                          },
-                          "Property": "Test Session Name"
-                        }
-                      },
-                      "Function": 5
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "cardVisual",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "BatchDownload"
-                            }
-                          },
-                          "Property": "PAsecureID"
-                        }
-                      },
-                      "Function": 2
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "c60b713934625175cdd2": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "314075c6a987a9491205",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "u",
-                        "Entity": "UnPivot1",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "u"
-                                    }
-                                  },
-                                  "Property": "Content Area"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'Science'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Content Area"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "be3bc8de31007d050a14",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "u",
-                        "Entity": "UnPivot1",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "u"
-                                        }
-                                      },
-                                      "Property": "AHCCSsession"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Y'"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "AHCCSsession"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "7088e5f571993151cb60",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Score Category"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "e910bcd068c01760da5b",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "UnPivot1"
-                            }
-                          },
-                          "Property": "Value"
-                        }
-                      },
-                      "Function": 1
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "clusteredColumnChart",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Score Category"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Score Category"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "7f8256a481d917670ce3": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "314075c6a987a9491205",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "u",
-                        "Entity": "UnPivot1",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "u"
-                                    }
-                                  },
-                                  "Property": "Content Area"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'Literature'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Content Area"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "be3bc8de31007d050a14",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "u",
-                        "Entity": "UnPivot1",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "u"
-                                        }
-                                      },
-                                      "Property": "AHCCSsession"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Y'"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "AHCCSsession"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "e1d6f630655de0371ca5",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "BatchDownload"
-                            }
-                          },
-                          "Property": "TotalScaleScoreColor"
-                        }
-                      },
-                      "Function": 5
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "37ad863619d36ba80c91",
+                  "name": "4e84efaea8b04714da19",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2160,22 +2627,7 @@
                           "Entity": "BatchDownload"
                         }
                       },
-                      "Property": "TotalScaleScoreColor"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "26c0a5612e0cb9c78d50",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MeasureTable"
-                        }
-                      },
-                      "Property": "Tooltip Session 1 vs 2"
+                      "Property": "Assessment Name"
                     }
                   },
                   "howCreated": 0
@@ -2183,25 +2635,26 @@
               ]
             },
             "singleVisual": {
-              "visualType": "clusteredColumnChart",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
                         }
-                      },
-                      "Property": "TotalScaleScoreColor"
+                      }
                     }
-                  }
+                  ]
                 }
-              ],
+              },
               "activeProjections": {
-                "Category": [
+                "Values": [
                   {
                     "Column": {
                       "Expression": {
@@ -2209,419 +2662,11 @@
                           "Entity": "BatchDownload"
                         }
                       },
-                      "Property": "TotalScaleScoreColor"
+                      "Property": "Assessment Name"
                     }
                   }
                 ]
               }
-            }
-          },
-          "4aa26e6d64a369e54a90": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "314075c6a987a9491205",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "u",
-                        "Entity": "UnPivot1",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "u"
-                                    }
-                                  },
-                                  "Property": "Content Area"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'Mathematics'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Content Area"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "be3bc8de31007d050a14",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "u",
-                        "Entity": "UnPivot1",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "u"
-                                        }
-                                      },
-                                      "Property": "AHCCSsession"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Y'"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "AHCCSsession"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "004f637e95822a030000",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "BatchDownload"
-                            }
-                          },
-                          "Property": "TotalScaleScoreColor"
-                        }
-                      },
-                      "Function": 5
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "0d842fd11aa8b7d011b0",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "TotalScaleScoreColor"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "ffe449128eb250000d0c",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MeasureTable"
-                        }
-                      },
-                      "Property": "Tooltip Session 1 vs 2"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "clusteredColumnChart",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "TotalScaleScoreColor"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "TotalScaleScoreColor"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "85e1b179a5b2cba07201": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "314075c6a987a9491205",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "u",
-                        "Entity": "UnPivot1",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "u"
-                                    }
-                                  },
-                                  "Property": "Content Area"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'Science'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "Content Area"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "be3bc8de31007d050a14",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "u",
-                        "Entity": "UnPivot1",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "u"
-                                        }
-                                      },
-                                      "Property": "AHCCSsession"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Y'"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UnPivot1"
-                        }
-                      },
-                      "Property": "AHCCSsession"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "6a64a284a68066d89dce",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "BatchDownload"
-                            }
-                          },
-                          "Property": "TotalScaleScoreColor"
-                        }
-                      },
-                      "Function": 5
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "35b80ce4a201404e2a5b",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "TotalScaleScoreColor"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "bf474aba7ac7cb096980",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MeasureTable"
-                        }
-                      },
-                      "Property": "Tooltip Session 1 vs 2"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "clusteredColumnChart",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "TotalScaleScoreColor"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BatchDownload"
-                        }
-                      },
-                      "Property": "TotalScaleScoreColor"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "56cc03eeae3a3cadd306": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
             }
           }
         }

@@ -66,6 +66,6 @@ relationship AutoDetected_46ab37c0-9d41-4488-a2f9-bd58b88bbaa5
 
 relationship ce05ab77-c52f-be2e-a32b-7e78ec078699
 	crossFilteringBehavior: bothDirections
-	fromColumn: UnPivot1.PAsecureID
+	fromColumn: UnPivotedScores.PAsecureID
 	toColumn: StudentInfo.'STUDENTS.State_StudentNumber'
 

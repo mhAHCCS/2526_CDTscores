@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 312.25352112676046,
+        "x": 312.67605633802816,
         "y": 0
       },
       "nodes": [
@@ -146,8 +146,7 @@
             "x": 902.19718309859184,
             "y": 0
           },
-          "nodeIndex": "UnPivot1",
-          "nodeLineageTag": "9450bafc-8344-4e4d-be4c-e293af8db201",
+          "nodeIndex": "UnPivotedScores",
           "size": {
             "height": 300,
             "width": 234

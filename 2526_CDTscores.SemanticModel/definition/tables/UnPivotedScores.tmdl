@@ -1,4 +1,4 @@
-table UnPivot1
+table UnPivotedScores
 	lineageTag: 9450bafc-8344-4e4d-be4c-e293af8db201
 
 	column 'Content Area'
@@ -109,7 +109,7 @@ table UnPivot1
 
 		annotation SummarizationSetBy = Automatic
 
-	partition UnPivot1 = m
+	partition UnPivotedScores = m
 		mode: import
 		source =
 				let

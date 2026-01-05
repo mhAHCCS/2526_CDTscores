@@ -404,7 +404,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "UnPivot1"
+                "Entity": "UnPivotedScores"
               }
             },
             "Property": "Content Area"
@@ -416,7 +416,7 @@
           "From": [
             {
               "Name": "u",
-              "Entity": "UnPivot1",
+              "Entity": "UnPivotedScores",
               "Type": 0
             }
           ],
@@ -458,7 +458,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "UnPivot1"
+                "Entity": "UnPivotedScores"
               }
             },
             "Property": "AHCCSsession"
@@ -470,7 +470,7 @@
           "From": [
             {
               "Name": "u",
-              "Entity": "UnPivot1",
+              "Entity": "UnPivotedScores",
               "Type": 0
             }
           ],

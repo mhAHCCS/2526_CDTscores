@@ -116,6 +116,28 @@ table MeasureTable
 			```
 		lineageTag: 5a04c2d3-4b6f-44f3-8eb6-29ae07d74814
 
+	measure 'Test1to2 Percent Change' = ```
+			
+			VAR Test1_Score = 
+			    CALCULATE(
+			        AVERAGE('UnpivotedScores'[Value]), 
+			        'UnpivotedScores'[AHCCSsession] = "1"
+			    )
+			VAR Test2_Score = 
+			    CALCULATE(
+			        AVERAGE('UnpivotedScores'[Value]), 
+			        'UnpivotedScores'[AHCCSsession] = "2"
+			    )
+			RETURN
+			    IF(
+			        NOT(ISBLANK(Test1_Score)), 
+			        DIVIDE(Test2_Score - Test1_Score, Test1_Score, 0), 
+			        BLANK()
+			    )
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: b8577fa1-c171-4123-9d25-1a5123476254
+
 	partition MeasureTable = m
 		mode: import
 		source =
